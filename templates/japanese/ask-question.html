@@ -1,0 +1,178 @@
+{% extends "japanese/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com: ログイン不要で、好きな言語で質問して共有できます{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}WorldQna.com で簡単に質問したり共有したりできることを体験してください。 複数の言語がサポートされており、ログインの必要がないため、多様なグローバル コミュニティに参加して知識を簡単に共有できます。{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Ask Question, Share Knowledge, Multilingual Interaction, No Login Required, Global Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}ask-question/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}ask-question/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}ask-question/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}ask-question/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}ask-question/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}ask-question/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}ask-question/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}ask-question/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}ask-question/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}ask-question/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}ask-question/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}ask-question/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}ask-question/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com: ログイン不要で、好きな言語で質問して共有できます{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}WorldQna.com で簡単に質問したり共有したりできることを体験してください。 複数の言語がサポートされており、ログインの必要がないため、多様なグローバル コミュニティに参加して知識を簡単に共有できます。{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}ask-question/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com: ログイン不要で、好きな言語で質問して共有できます{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}WorldQna.com で簡単に質問したり共有したりできることを体験してください。 複数の言語がサポートされており、ログインの必要がないため、多様なグローバル コミュニティに参加して知識を簡単に共有できます。{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "ask" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_ask" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_ask" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_ask" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_ask" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_ask" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_ask" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_ask" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_ask" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_ask" %}{% endblock body_japanese_url %}
+
+
+
+
+
+{% block head %}
+{% load static %}<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+{% endblock head %}
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+        
+        <section>
+            
+            
+            <div>
+                <div class="alert error" id="nameLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Please enter at least 10 characters
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="alert error" id="messageLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Text content cannot exceed 500 characters
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="alert error" id="imageLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> under 6mb size image allowed
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <h1 style="text-align: center;">質問をする</h1>
+                <form class="editor-container" method="post" enctype="multipart/form-data" action="{% url 'ask' %}" onsubmit="return submitForm();" name="yourFormName">
+                    {% csrf_token %}
+                    <input type="file" name="question_image" id="imageUploader" accept="image/*" onchange="handleImageUpload(this)">
+                    <input type="hidden" name="english_title_question" placeholder="Enter your question title" id="englishTitleQuestion" value="">
+                    <div id="editor" contenteditable="true" data-placeholder="質問を追加してください" oninput="updateHiddenInput()" ondrop="handleDragAndDrop(event)" ondragover="event.preventDefault()"></div>
+                    <div id="errorMessage" class="error-message"></div>
+                    <div class="bo">
+                        <button id="uploadButton" type="button" onclick="document.getElementById('imageUploader').click()">Upload Image</button>
+                        <button id="submitButton" type="submit" onclick="submitForm()">Submit Question</button>
+
+                    </div>
+                </form>
+                
+                <div class="alert success" id="successAlert" style="display: none;">
+                    <span class="icon">&#10003;</span>
+                    <strong>Success:</strong> Your message has been sent in <span id="successCountdown">10</span> seconds...
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="ask">
+                    <h2>WorldQna.comで質問する方法</h2>
+                    <p>WorldQna.comで質問する手順は次のとおりです：</p>
+                    <ol>
+                        <li><strong>WorldQna.comにアクセス：</strong>お気に入りのウェブブラウザを開き、<a
+                            href="https://worldqna.com" target="_blank">worldqna.com</a>にアクセスします。</li>
+                            
+                        <li><strong>「質問する」オプションを探す：</strong>ナビゲーションバーで「質問する」オプションを探します。これは、ユーザーの利便性とアクセシビリティを考慮して設計されており、多言語サポートも提供しています。</li>
+                        
+                        <li><strong>質問を準備する：</strong>指定されたテキストボックスに質問を入力します。明確で簡潔な質問で最良の回答を得るために、できるだけ簡潔にしましょう。</li>
+                        
+                        <li><strong>言語を選択する：</strong>WorldQna.comは多言語をサポートしています。質問をする際に、自分が最も自然な感じる言語を選択してください。</li>
+                        
+                        <li><strong>ログインは不要です：</strong>私たちは障壁を取り除くことを信じており、ユーザーアカウントの必要はありません。ログインなしで質問をすることができます。</li>
+                        
+                        <li><strong>質問を提出する：</strong>質問を準備したら、提出ボタンを押してください。質問は私たちのコミュニティや専門家に対して検討されます。</li>
+                        <li><strong>質問ボックスに関する注意:</strong> テキストと 1 つの画像の両方を使用して質問を送信できます。 画像のみまたはドラッグ アンド ドロップ画像のみを使用した投稿は処理されません。 含まれる画像のサイズが 6MB 未満であることを確認してください。 付随するテキストは 10 文字以上、500 文字を超えてはなりません。</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <h2>質問を提出した後の手順</h2>
+                    <p>WorldQna.comで質問を提出した後は、次のような手順があります：</p>
+                    
+                    <ul>
+                        <li>質問は私たちの審査待ちリストに追加されます。</li>
+                        <li>私たちのチームは、適切な専門家やコミュニティのメンバーに質問が適切かつタイムリーに回答されるようにします。</li>
+                        <li>数時間後に、worldqna.comにアクセスして質問を検索すると、回答が複数の言語で提供されます。</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2>回答に参加する</h2>
+                    <p>回答が始まると、以下のようにアクティブにディスカッションに参加できます：</p>
+                    
+                    <ul>
+                        <li>質問の明確化を求める。</li>
+                        <li>追加の詳細を共有して回答を修正する。</li>
+                        <li>価値のある経験に感謝の意を表す。</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2>グローバルディスカッションに参加する</h2>
+                    <p>あなたの質問はWorldQna.comの多様な知識の一部になります。グローバルコミュニティに参加してください：</p>
+                    
+                    <ul>
+                        <li>共通の関心を持つ人々とつながります。</li>
+                        <li>言語の壁を乗り越える豊かなコミュニティを楽しむ。</li>
+                    </ul>
+                </div>
+                
+                
+                
+                
+                
+            </section>
+            
+            
+        </div>
+</div>
+
+<script src="{% static "js/ask.js" %}"></script>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

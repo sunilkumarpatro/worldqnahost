@@ -1,0 +1,180 @@
+{% extends "chinese/base.html" %}
+{% comment %}chinese language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com：打破在线讨论中的语言障碍{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}WorldQna.com：以多种语言提问和回答，无需登录。 轻松加入全球讨论。{% endblock en_description %}
+
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}worldqna.com, multilingual discussions, online conversations, global community, language
+barriers, knowledge sharing{% endblock en_keywords %}
+{% comment %} add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}home/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {%
+endcomment %}
+{% block x_default_url %}{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}home/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}home/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}home/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}home/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}home/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}home/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}home/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}home/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}home/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}home/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com：打破在线讨论中的语言障碍{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}WorldQna.com：以多种语言提问和回答，无需登录。 轻松加入全球讨论。{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}home/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com：打破在线讨论中的语言障碍{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}WorldQna.com：以多种语言提问和回答，无需登录。 轻松加入全球讨论。{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "home" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_home" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_home" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_home" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_home" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_home" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_home" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_home" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_home" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_home" %}{% endblock body_japanese_url %}
+{% block base_head %}{% load static %}{% endblock base_head %}
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="banner">
+        <div class="mini-banner">
+
+            <h1>WorldQna.com：打破在线讨论中的语言障碍</h1>
+            <p>WorldQna：轻松获取全球知识！ 无需登录，多语言专家即时解答。 参与社区，以文本或视频格式探索不同的主题。 立即加入我们的 worldqna.com</p>
+            <button><a href="/zh/ask-question/" style="color: white;">Ask Question</a></button>
+        </div>
+    </div>
+    <div class="trending-question">
+        <div class="r-box">
+            <div class="top-box">Trending Question</div>
+            <div class="bottom-box"><img src="{% static "img/worldqna.png" %}" alt="img" srcset=""></div>
+        </div>
+        <div class="l-box">
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>In today's rapidly evolving world, art continues to push boundaries and challenge perceptions. From traditional mediums like painting and sculpture to digital and performance art, creators are breaking free from convention to express complex ideas and emotions. This diversity fuels a vibrant cultural landscape</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+        </div>
+    </div>
+    <div class="lang-box">
+        <div class="lang-top-box">
+            <p class="f1">选择语言</p>
+            <p>在我们的平台上探索多种语言。 选择英语、印地语、西班牙语、中文、阿拉伯语、法语、葡萄牙语、俄语、德语或日语。</p>
+        </div>
+        <div class="lang-bottom-box">
+            <div class="lang-bo">English</div>
+            <div class="lang-bo">Hindi</div>
+            <div class="lang-bo">Spanish</div>
+            <div class="lang-bo">Chinese</div>
+            <div class="lang-bo">Arabic</div>
+            <div class="lang-bo">French</div>
+            <div class="lang-bo">Portuguese</div>
+            <div class="lang-bo">Russian</div>
+            <div class="lang-bo">German</div>
+            <div class="lang-bo">Japanese</div>
+        </div>
+    </div>
+    <div class="main">
+
+
+        <section class="home-section">
+           
+        
+            <h2>我们的愿景</h2>
+            <p>在 WorldQna，我们设想了一个全球社区，在这里信息自由流动，突破语言和获取方面的障碍。我们的使命是为个人提供资源，使他们能够根据信息做出决策，学习新事物，并获取与各个领域的专家联系的必要资源和工具。</p>
+        
+            <h2>主要特点：</h2>
+            <ul>
+                <li><strong>无需登录：</strong> 享受访问信息的体验，无需用户帐户。</li>
+                <li><strong>快速回答：</strong> 我们专注的团队确保及时和准确地回答您的问题。</li>
+                <li><strong>全球覆盖：</strong> WorldQna 的设计考虑到了全球用户，并提供多种语言的内容。</li>
+                <li><strong>响应式设计：</strong> 我们的响应式网页设计让您在任何设备上都能获得一致的体验。</li>
+            </ul>
+        
+            <h2>探索 WorldQna</h2>
+            <p>1. <strong>提出问题：</strong> 在不需要登录的情况下提出关于各种主题的问题。</p>
+            <p>2. <strong>获取专家答案：</strong> 我们的专家团队在几个小时内提供可靠且深入的答案。</p>
+            <p>3. <strong>与社区互动：</strong> 参与讨论，分享您的知识，并与志同道合的人建立联系。</p>
+        
+            <h2>如何使用 WorldQna</h2>
+            <p>使用 WorldQna 非常简单直接。遵循以下步骤以充分利用您的体验：</p>
+            <ol class="list">
+                <li><strong>访问我们的网站：</strong> 使用您喜欢的网络浏览器访问 worldqna.com。</li>
+                <li><strong>提出问题：</strong> 转到“提问”部分并键入您的问题。无需登录！</li>
+                <li><strong>获取专家答案：</strong> 我们的团队将迅速而准确地为您的问题提供答案，通常在几个小时内。</li>
+                <li><strong>与社区互动：</strong> 参与讨论，提供反馈，并与其他用户建立联系。</li>
+            </ol>
+        
+            <h2>使用 WorldQna 的好处</h2>
+            <p>通过选择 WorldQna，您将获得各种好处：</p>
+            <ul>
+                <li><strong>多样化的知识获取：</strong> 从世界各地的专家那里了解各种主题的答案。</li>
+                <li><strong>及时的解决方案：</strong> 在几个小时内获得您的问题的快速答案。</li>
+                <li><strong>社区组织：</strong> 与志同道合的人联系，分享您的观点，并从他人那里学习。</li>
+                <li><strong>无需登录麻烦：</strong> 享受提问的便利，无需用户帐户。</li>
+            </ul>
+        
+            
+        </section>
+    </div>
+    <p style="text-align: center;padding: 0px 10px 30px 10px;"><b>立即加入 WorldQna.com，开启一个充满知识、联系和便利的世界！</b></p>
+
+</div>
+{% endblock body %}
+{% comment %} <!-- end body --> {% endcomment %}

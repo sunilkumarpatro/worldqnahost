@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="{% block base_lang %}{% endblock base_lang %}">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block base_title %}{% endblock base_title %}</title>
+    {% comment %} Meta Description {% endcomment %}
+    <meta name="description" content="{% block base_description %}{% endblock base_description %}">
+    {% comment %} Meta Keywords {% endcomment %}
+    <meta name="keywords" content="{% block base_keywords %}{% endblock base_keywords %}">
+    {% comment %} Canonical Tag {% endcomment %}
+    <link rel="canonical" href="https://www.worldqna.com/{% block base_canonical_url %}{% endblock base_canonical_url %}" />
+    {% comment %} Hreflang Tags {% endcomment %}
+    {% comment %} Default {% endcomment %}
+    <link rel="alternate" hreflang="x-default" href="https://www.worldqna.com/{% block base_x_default_url %}{% endblock base_x_default_url %}" />
+    {% comment %} English {% endcomment %}
+    <link rel="alternate" hreflang="en" href="https://www.worldqna.com/{% block base_en_url %}{% endblock base_en_url %}">
+    {% comment %} Spanish {% endcomment %}
+    <link rel="alternate" hreflang="es" href="https://www.worldqna.com/es/{% block base_es_url %}{% endblock base_es_url %}">
+    {% comment %} Hindi {% endcomment %}
+    <link rel="alternate" hreflang="hi" href="https://www.worldqna.com/hi/{% block base_hi_url %}{% endblock base_hi_url %}">
+    {% comment %} Chinese (Mandarin) {% endcomment %}
+    <link rel="alternate" hreflang="zh" href="https://www.worldqna.com/zh/{% block base_zh_url %}{% endblock base_zh_url %}">
+    {% comment %} Arabic {% endcomment %}
+    <link rel="alternate" hreflang="ar" href="https://www.worldqna.com/ar/{% block base_ar_url %}{% endblock base_ar_url %}">
+    {% comment %} Portuguese {% endcomment %}
+    <link rel="alternate" hreflang="pt" href="https://www.worldqna.com/pt/{% block base_pt_url %}{% endblock base_pt_url %}">
+    {% comment %} Russian {% endcomment %}
+    <link rel="alternate" hreflang="ru" href="https://www.worldqna.com/ru/{% block base_ru_url %}{% endblock base_ru_url %}">
+    {% comment %} French {% endcomment %}
+    <link rel="alternate" hreflang="fr" href="https://www.worldqna.com/fr/{% block base_fr_url %}{% endblock base_fr_url %}">
+    {% comment %} Japanese {% endcomment %}
+    <link rel="alternate" hreflang="ja" href="https://www.worldqna.com/ja/{% block base_ja_url %}{% endblock base_ja_url %}">
+    {% comment %} German {% endcomment %}
+    <link rel="alternate" hreflang="de" href="https://www.worldqna.com/de/{% block base_de_url %}{% endblock base_de_url %}">
+    {% comment %} Open Graph / Facebook {% endcomment %}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.worldqna.com/{% block base_seo_facebook_url %}{% endblock base_seo_facebook_url %}" />
+    <meta property="og:title" content="{% block base_seo_facebook_title %}{% endblock base_seo_facebook_title %}" />
+    <meta property="og:description" content="{% block base_seo_facebook_description %}{% endblock base_seo_facebook_description %}" />
+    <meta property="og:image" content="{% block base_seo_facebook_image %}{% endblock base_seo_facebook_image %}" />
+    {% comment %} Twitter {% endcomment %}
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.worldqna.com/{% block base_seo_twitter_url %}{% endblock base_seo_twitter_url %}" />
+    <meta property="twitter:title" content="{% block base_seo_twitter_title %}{% endblock base_seo_twitter_title %}" />
+    <meta property="twitter:description" content="{% block base_seo_twitter_description %}{% endblock base_seo_twitter_description %}" />
+    <meta property="twitter:image" content="{% block base_seo_twitter_image %}{% endblock base_seo_twitter_image %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    {% comment %} add Schema Markup {% endcomment %}
+    {% block base_head %}{% endblock base_head %}
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="side-bar"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+            <div class="side-box">
+                <ul>
+                    <li><a href="{% block base_body_home %}{% endblock base_body_home %}">Home</a></li>
+                    <li><a href="{% block base_body_about %}{% endblock base_body_about %}">About</a></li>
+                    <li><a href="{% block base_body_contact %}{% endblock base_body_contact %}">Contact</a></li>
+                    <li><a href="{% block base_body_privacy %}{% endblock base_body_privacy %}">Privacy</a></li>
+                    
+                </ul>
+            </div>
+            <div class="logo">WORLD QNA</div>
+            <div class="search-bar"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></div>
+        </div>
+        <div class="bottom-nav">
+            <div class="asking"><a href="{% block base_ask %}{% endblock base_ask %}">Ask Question</a></div>
+            <div class="language"><a href="" onclick="toggleSelect(); return false;">{% block language_select %}
+              
+            {% endblock language_select %}&nbsp;&nbsp;<i
+                        class="fa-solid fa-caret-down" style="color: #ffffff;"></i></a></div>
+        </div>
+    </header>
+    
+
+    <div class="search-box-popup" id="searchBoxPopup">
+        <form action="{% block base_search_url %}{% endblock base_search_url %}" method="get" onsubmit="return validateForm()">
+            <div class="search-header">
+                <i class="fa fa-arrow-left" aria-hidden="true" onclick="closeSearchBoxPopup()"></i>
+                <input type="text" name="query" placeholder="Enter your search query" oninput="getSuggestions(this.value)">
+            </div>
+            <div class="search-results" id="searchResults">
+    
+                <!-- Auto-suggestions will appear here -->
+    
+            </div>
+        </form>
+    </div>
+    <div id="languageSelect">
+        <input type="text" placeholder="Search languages..." onkeyup="filterLanguages(event)" />
+        <ul id="languageList">
+            <li><a href="{% block base_body_english_url %}{% endblock base_body_english_url %}">English</a></li>
+            <li><a href="{% block base_body_hindi_url %}{% endblock base_body_hindi_url %}">Hindi</a></li>
+            <li><a href="{% block base_body_spanish_url %}{% endblock base_body_spanish_url %}">Spanish</a></li>
+            <li><a href="{% block base_body_chinese_url %}{% endblock base_body_chinese_url %}">Chinese</a></li>
+            <li><a href="{% block base_body_arabic_url %}{% endblock base_body_arabic_url %}">Arabic</a></li>
+            <li><a href="{% block base_body_french_url %}{% endblock base_body_french_url %}">French</a></li>
+            <li><a href="{% block base_body_portuguese_url %}{% endblock base_body_portuguese_url %}">Portuguese</a></li>
+            <li><a href="{% block base_body_russian_url %}{% endblock base_body_russian_url %}">Russian</a></li>
+            <li><a href="{% block base_body_german_url %}{% endblock base_body_german_url %}">German</a></li>
+            <li><a href="{% block base_body_japanese_url %}{% endblock base_body_japanese_url %}">Japanese</a></li>
+
+        </ul>
+    </div>
+    {% block base_body %}{% endblock base_body %}
+    <script src="{% static "js/script.js" %}"></script>
+    <footer>
+
+        <p>&copy; 2024 WorldQna.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>

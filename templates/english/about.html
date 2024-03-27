@@ -1,0 +1,125 @@
+{% extends "english/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}Learn More About WorldQna.com: Connecting the World through Multilingual Conversations{% endblock en_title %}
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}Discover the story behind WorldQna.com, a platform dedicated to fostering global connections through multilingual discussions. Explore our mission, vision, and the team driving this language-inclusive community.{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, About Us, Multilingual Platform, Global Connections, Mission and Vision, Language-Inclusive Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}about-us/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}about-us/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}about-us/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}about-us/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}about-us/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}about-us/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}about-us/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}about-us/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}about-us/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}about-us/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}about-us/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}about-us/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}about-us/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}Learn More About WorldQna.com: Connecting the World through Multilingual Conversations{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}Discover the story behind WorldQna.com, a platform dedicated to fostering global connections through multilingual discussions. Explore our mission, vision, and the team driving this language-inclusive community.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}about-us/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}Learn More About WorldQna.com: Connecting the World through Multilingual Conversations{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}Discover the story behind WorldQna.com, a platform dedicated to fostering global connections through multilingual discussions. Explore our mission, vision, and the team driving this language-inclusive community.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "about" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_about" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_about" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_about" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_about" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_about" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_about" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_about" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_about" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_about" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            
+            
+            
+            <div class="welcome-section">
+                <h1>About Us Page</h1>
+                
+            </div>
+            
+            <p>Welcome to WorldQna.com, the global Q&A platform revolutionizing online discussions and breaking language barriers.</p>
+
+            <h2>Our Mission</h2>
+            <p>At WorldQna, we're on a mission to create a global community where information flows freely, transcending language and accessibility barriers. We aim to empower individuals by providing tools and resources to make informed decisions, learn new things, and connect with experts worldwide.</p>
+    
+            <h2>Why Choose WorldQna.com?</h2>
+            <p>WorldQna.com stands out for its unique features:</p>
+            <ul>
+                <li>No Login Required: Experience the freedom to access information without the need for a user account.</li>
+                <li>Instant Answers: Our dedicated team ensures timely and accurate responses to your queries.</li>
+                <li>Global Reach: WorldQna is designed to cater to users from around the world, offering content in multiple languages.</li>
+                <li>Responsive Design: Enjoy a seamless experience on any device with our responsive web design.</li>
+            </ul>
+    
+            <h2>How WorldQna Works</h2>
+            <p>WorldQna.com allows users to:</p>
+            <ol>
+                <li>Ask Questions: Pose your queries on a wide range of topics without the need for a login.</li>
+                <li>Get Expert Answers: Our team of experts provides reliable and well-researched responses within a few hours.</li>
+                <li>Engage with the Community: Join discussions, share your knowledge, and connect with like-minded individuals.</li>
+            </ol>
+    
+            <h2>Join the Global Conversation</h2>
+            <p>Using WorldQna is easy and straightforward:</p>
+            <ol>
+                <li>Visit Our Website: Go to worldqna.com using your preferred web browser.</li>
+                <li>Ask a Question: Navigate to the "Ask a Question" section and type your inquiry. No need to log in!</li>
+                <li>Receive Expert Answers: Our team will promptly respond with well-researched answers within a few hours.</li>
+                <li>Engage with the Community: Join discussions, provide feedback, and connect with other users who share your interests.</li>
+            </ol>
+    
+            <h2>Benefits of Using WorldQna</h2>
+            <p>By choosing WorldQna, you unlock a range of benefits:</p>
+            <ul>
+                <li>Access to Diverse Knowledge: Explore answers on a wide range of topics from experts around the world.</li>
+                <li>Time-Efficient Solutions: Get rapid responses to your questions within a few hours.</li>
+                <li>Community Engagement: Connect with like-minded individuals, share your insights, and learn from others.</li>
+                <li>No Login Hassle: Enjoy the convenience of asking questions without the need for a user account.</li>
+            </ul>
+    
+            <p>Join WorldQna.com today and embark on a journey of discovery. Expand your horizons, connect with like-minded individuals, and let your curiosity thrive in this global knowledge hub. Together, let's make WorldQna.com the epicenter of intellectual exploration!</p>
+            
+        </section>
+    </div>
+</div>
+{% endblock body %}
+{% comment %} <!-- end body --> {% endcomment %}

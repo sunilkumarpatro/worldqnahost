@@ -1,0 +1,189 @@
+{% extends "arabic/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}{{ qna.arabic_title_question }}{% endblock en_title %}
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}{{ qna.arabic_descripton }}{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}{{ qna.english_keyword }}{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}{{ qna.slug }}{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}{{ qna.slug }}{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}{{ qna.slug }}{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}{{ qna.slug }}{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}{{ qna.slug }}{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}{{ qna.slug }}{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}{{ qna.slug }}{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}{{ qna.slug }}{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}{{ qna.slug }}{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}{{ qna.slug }}{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}{{ qna.slug }}{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}{{ qna.slug }}{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}{{ qna.slug }}{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}{{ qna.arabic_title_question }}{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}{{ qna.arabic_descripton }}{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}{{ qna.facebook_image }}{% endblock seo_facebook_image %}
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}{{ qna.slug }}{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}{{ qna.arabic_title_question }}{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}{{ qna.arabic_descripton }}{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}{{ qna.twitter_image }}{% endblock seo_twitter_image %}
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}/{{ qna.slug }}{% endblock %}
+{% block body_hindi_url %}/hi/{{ qna.slug }}{% endblock %}
+{% block body_spanish_url %}/es/{{ qna.slug }}{% endblock %}
+{% block body_chinese_url %}/zh/{{ qna.slug }}{% endblock %}
+{% block body_arabic_url %}/ar/{{ qna.slug }}{% endblock %}
+{% block body_french_url %}/fr/{{ qna.slug }}{% endblock %}
+{% block body_portuguese_url %}/pt/{{ qna.slug }}{% endblock %}
+{% block body_russian_url %}/ru/{{ qna.slug }}{% endblock %}
+{% block body_german_url %}/de/{{ qna.slug }}{% endblock %}
+{% block body_japanese_url %}/ja/{{ qna.slug }}{% endblock %}
+{% block head %}
+{% load static %}<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+<style>
+    .alert {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    </style>
+{% endblock head %}
+<!-- start body -->
+{% block body %}
+<div class="container" style="padding:0px;">
+    <div class="main" style="padding-top: 0px;">
+
+{% if qna.showhide == "show" %}
+<div class="qna-container">
+    <div class="qna-box">
+        <div class="question">
+            <h1>{{ qna.arabic_title_question }}</h1>
+        </div>
+        {% if qna.question_image %}
+        <div class="youtube">
+            <div class="video-container">
+                <img src="/media/{{ qna.question_image }}" alt="" title="" loading="lazy">
+                <a href="{{ qna.youtube_link }}" target="_blank" class="youtube-icon">
+                    <i class="fab fa-youtube" style="color: #ffffff;"></i>
+                </a>
+            </div>
+        </div>
+        {% endif %}
+        <div class="answer">
+            {{ qna.arabic_answer|safe }}
+        </div>
+            <div class="comment-box">
+                <div class="comment-heading">Comments</div>
+                <div class="alert success" style="display: none;">
+                    <span class="icon">&#10003;</span>
+                    <strong>Success:</strong> Your comment has been sent in <span id="successCountdown">10</span> seconds...
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                
+                <div class="alert error" id="commentLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Please enter at least 3 characters for your comment.
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="alert error" id="commentMaxLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Your comment is too long. Your comment has not been added.
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                
+                <form class="comment-add" id="commentForm" method="post" action="{% url 'ar_add_comment' %}">
+                    {% csrf_token %}
+                    <input type="hidden" id="qna_catagary" name="qna_catagary" value="{{ qna.slug }}">
+                    
+                    <input type="text" name="comment" id="comment" placeholder="Add a comment..." class="comment-input" required style="width:100%; /* Adjusted width */
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid #ccc; 
+                    margin-bottom: 10px;
+                    outline: none;
+                    font-size: 1rem;border-radius: 0px;"> 
+                   
+                    <input type="submit" id="commentFormSubmit" value="Comment" class="comment-button" style="background-color:#007bff;border-radius: 5px;padding: 10px 0; font-size:1rem;">
+                 
+                </form>
+                <div class="comments-section">
+                    {% for comment in qna.comment_set.all reversed %}
+                    {% if comment.arabic_comment %}
+                        <div class="comment">
+                            <div class="user-id"><span class="fc-1">User</span> : {{ comment.id }}</div>
+                            <div class="user-comment">{{ comment.arabic_comment }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                
+                
+    </div>
+    {% if qna.comment_set.all|length > 10 %}
+    <div class="button-container">
+        <button id="load-more-btn">Load More</button>
+    </div>
+{% endif %}
+
+
+        </div>
+            
+            
+    </div>
+    
+    <div class="related-box">
+        <div class="related-top">Tranding Question</div>
+        <div class="accordion">
+            {% for related in qna.related_set.all %}
+            <div class="accordion-item">
+              <div class="accordion-header">{{ related.arabic_question }}</div>
+              <div class="accordion-content">
+                <p>{{ related.arabic_answer }}</p>
+                <a href="/ar/{{ related.url }}" class="read-more">Read more</a>
+              </div>
+            </div>
+            {% empty %}
+            
+            {% endfor %}
+        </div>
+        
+    </div>
+    {% else %}
+    <p>Content is currently unavailable.</p>
+    {% endif %}
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+    </div>
+</div>
+{% load static %}
+<script src="{% static 'js/comment.js' %}"></script>
+<script src="{% static 'js/acrodion.js' %}"></script>
+
+{% endblock body %}
+
+<!-- end body -->
+                                                           

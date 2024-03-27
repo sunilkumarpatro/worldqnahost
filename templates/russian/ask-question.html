@@ -1,0 +1,195 @@
+{% extends "russian/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com: спрашивайте и делитесь информацией на предпочитаемом вами языке, вход в систему не требуется{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}Узнайте, как просто задавать вопросы и делиться ими на WorldQna.com. Благодаря поддержке нескольких языков и отсутствию необходимости входа в систему присоединяйтесь к разнообразному глобальному сообществу и легко делитесь знаниями.{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Ask Question, Share Knowledge, Multilingual Interaction, No Login Required, Global Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}ask-question/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}ask-question/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}ask-question/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}ask-question/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}ask-question/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}ask-question/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}ask-question/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}ask-question/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}ask-question/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}ask-question/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}ask-question/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}ask-question/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}ask-question/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com: спрашивайте и делитесь информацией на предпочитаемом вами языке, вход в систему не требуется{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}Узнайте, как просто задавать вопросы и делиться ими на WorldQna.com. Благодаря поддержке нескольких языков и отсутствию необходимости входа в систему присоединяйтесь к разнообразному глобальному сообществу и легко делитесь знаниями.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}ask-question/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com: спрашивайте и делитесь информацией на предпочитаемом вами языке, вход в систему не требуется{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}Узнайте, как просто задавать вопросы и делиться ими на WorldQna.com. Благодаря поддержке нескольких языков и отсутствию необходимости входа в систему присоединяйтесь к разнообразному глобальному сообществу и легко делитесь знаниями.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "ask" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_ask" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_ask" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_ask" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_ask" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_ask" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_ask" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_ask" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_ask" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_ask" %}{% endblock body_japanese_url %}
+
+
+
+
+{% block head %}
+{% load static %}<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+{% endblock head %}
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+        
+        <section>
+            
+            
+            <div>
+                
+                
+                <div class="alert error" id="nameLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Please enter at least 10 characters
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="alert error" id="messageLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Text content cannot exceed 500 characters
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="alert error" id="imageLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> under 6mb size image allowed
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <h1 style="text-align: center;">задавать вопросы</h1>
+                <form class="editor-container" method="post" enctype="multipart/form-data" action="{% url 'ask' %}" onsubmit="return submitForm();" name="yourFormName">
+                    {% csrf_token %}
+                    <input type="file" name="question_image" id="imageUploader" accept="image/*" onchange="handleImageUpload(this)">
+                    <input type="hidden" name="english_title_question" placeholder="Enter your question title" id="englishTitleQuestion" value="">
+                    <div id="editor" contenteditable="true" data-placeholder="добавьте свой вопрос" oninput="updateHiddenInput()" ondrop="handleDragAndDrop(event)" ondragover="event.preventDefault()"></div>
+                    <div id="errorMessage" class="error-message"></div>
+                    <div class="bo">
+                        <button id="uploadButton" type="button" onclick="document.getElementById('imageUploader').click()">Upload Image</button>
+                        <button id="submitButton" type="submit" onclick="submitForm()">Submit Question</button>
+
+                    </div>
+                </form>
+                <div class="alert success" id="successAlert" style="display: none;">
+                    <span class="icon">&#10003;</span>
+                    <strong>Success:</strong> Your message has been sent in <span id="successCountdown">10</span> seconds...
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                
+                
+                <div class="ask">
+                    <h2>Как задать вопрос на WorldQna.com</h2>
+                    <p>Отправьтесь в путешествие в поисках знаний, задав вопрос на WorldQna.com. Следуйте этим простым шагам:</p>
+                    <ol>
+                        <li><strong>Посетите WorldQna.com:</strong> Откройте ваш любимый веб-браузер и перейдите по ссылке <a
+                                href="https://worldqna.com" target="_blank">worldqna.com</a>.</li>
+                
+                        <li><strong>Найдите раздел "Задать вопрос":</strong> Найдите опцию "Задать вопрос" в панели навигации.
+                            Она разработана с учетом удобства пользователя и доступности, поддерживая несколько языков.</li>
+                
+                        <li><strong>Сформулируйте ваш вопрос:</strong> Введите ваш вопрос в предоставленное текстовое поле. Будьте ясны
+                            и кратки для получения наилучшего ответа.</li>
+                
+                        <li><strong>Выберите язык:</strong> WorldQna.com поддерживает несколько языков. Выберите язык, на котором вам
+                            удобнее всего задавать ваш вопрос для глобального обсуждения.</li>
+                
+                        <li><strong>Нет необходимости входа:</strong> Мы верим в преодоление барьеров, и это включает в себя
+                            необходимость в учетных записях пользователей. Наслаждайтесь свободой задавать вопросы без необходимости
+                            входа.</li>
+                
+                        <li><strong>Отправьте ваш вопрос:</strong> Как только вы сформулировали свой вопрос, нажмите кнопку
+                            отправки. Ваш запрос будет отправлен нашему сообществу и выделенным экспертам для рассмотрения.</li>
+                
+                        <li><strong>Примечание о текстовом поле для вопроса:</strong> Вы можете отправлять вопросы с текстом и одним
+                            изображением. Запросы только с изображениями или перетаскиванием изображений не будут обрабатываться.
+                            Убедитесь, что включенное изображение не превышает 6 МБ по размеру. Сопроводительный текст должен быть
+                            не менее 10 символов и не более 500 символов.</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <h2>Что происходит после отправки вашего вопроса</h2>
+                    <p>Вот что происходит после отправки вашего вопроса на WorldQna.com:</p>
+                
+                    <ul>
+                        <li>Ваш вопрос попадает в нашу очередь на рассмотрение.</li>
+                        <li>Наша команда гарантирует, что ваш запрос достигнет подходящих экспертов или членов сообщества для
+                            точных и своевременных ответов.</li>
+                        <li>Ожидайте ответов в течение нескольких часов, что позволит вам быстро получить информацию, которую вы
+                            ищете.</li>
+                        <li>Через несколько часов посетите worldqna.com, найдите ваш вопрос и найдите ответ, доступный на нескольких
+                            языках.</li>
+                    </ul>
+                
+                </div>
+                
+                <div>
+                    <h2>Взаимодействие с ответами</h2>
+                    <p>После того как начнут поступать ответы, вы можете активно участвовать в дальнейших обсуждениях:</p>
+                
+                    <ul>
+                        <li>Не стесняйтесь просить уточнений.</li>
+                        <li>Дополнительно делитесь деталями, чтобы уточнить ответы.</li>
+                        <li>Выражайте благодарность за предоставленные ценные идеи.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2>Станьте частью глобального разговора</h2>
+                    <p>Ваш вопрос вносит свой вклад в живописную картина знаний на WorldQna.com. Присоединяйтесь к глобальному
+                        сообществу:</p>
+                
+                    <ul>
+                        <li>Общайтесь с единомышленниками, которые разделяют ваши интересы.</li>
+                        <li>Наслаждайтесь богатством сообщества, которое преодолевает языковые барьеры.</li>
+                    </ul>
+                </div>
+                
+                
+                
+                
+                
+            </section>
+            
+            
+        </div>
+</div>
+
+<script src="{% static "js/ask.js" %}"></script>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

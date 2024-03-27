@@ -1,0 +1,126 @@
+{% extends "hindi/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com के बारे में और अधिक जानें: बहुभाषी वार्तालाप के माध्यम से दुनिया को जोड़ना{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}WorldQna.com के पीछे की कहानी का खोजें, एक प्लेटफ़ॉर्म जो बहुभाषी चर्चाओं के माध्यम से वैश्विक संबंधों को प्रोत्साहित करने के लिए समर्पित है। हमारी मिशन, दृष्टि, और इस भाषा समावेशी समुदाय को आगे बढ़ाने वाली टीम का अन्वेषण करें।{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, About Us, Multilingual Platform, Global Connections, Mission and Vision, Language-Inclusive Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}about-us/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}about-us/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}about-us/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}about-us/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}about-us/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}about-us/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}about-us/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}about-us/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}about-us/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}about-us/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}about-us/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}about-us/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}about-us/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com के बारे में और अधिक जानें: बहुभाषी वार्तालाप के माध्यम से दुनिया को जोड़ना{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}WorldQna.com के पीछे की कहानी का खोजें, एक प्लेटफ़ॉर्म जो बहुभाषी चर्चाओं के माध्यम से वैश्विक संबंधों को प्रोत्साहित करने के लिए समर्पित है। हमारी मिशन, दृष्टि, और इस भाषा समावेशी समुदाय को आगे बढ़ाने वाली टीम का अन्वेषण करें।{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}about-us/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com के बारे में और अधिक जानें: बहुभाषी वार्तालाप के माध्यम से दुनिया को जोड़ना{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}WorldQna.com के पीछे की कहानी का खोजें, एक प्लेटफ़ॉर्म जो बहुभाषी चर्चाओं के माध्यम से वैश्विक संबंधों को प्रोत्साहित करने के लिए समर्पित है। हमारी मिशन, दृष्टि, और इस भाषा समावेशी समुदाय को आगे बढ़ाने वाली टीम का अन्वेषण करें।{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "about" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_about" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_about" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_about" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_about" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_about" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_about" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_about" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_about" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_about" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            
+            
+            
+            <div class="welcome-section">
+                <h1>About Us Page</h1>
+                
+            </div>
+            
+            <p>WorldQna.com में आपका स्वागत है, जो ऑनलाइन चर्चाओं को क्रांतिकारी बनाने और भाषा बाधाओं को तोड़ने में समर्थ है।</p>
+
+            <h2>हमारा मिशन</h2>
+            <p>WorldQna में, हम एक वैश्विक समुदाय बनाने का मिशन पर हैं, जहां सूचना स्वतंत्रता से प्रवाहित होती है, भाषा और पहुँच की बाधाओं को पार करते हैं। हम व्यक्तियों को साधन और संसाधन प्रदान करके उन्हें सूचित निर्णय लेने, नई चीजें सीखने, और विश्वभर के विशेषज्ञों से जुड़ने की सामर्थ्य प्रदान करने का लक्ष्य रखते हैं।</p>
+    
+            <h2>WorldQna.com क्यों चुनें?</h2>
+            <p>WorldQna.com अपनी अद्वितीय विशेषताओं के लिए उभरता है:</p>
+            <ul>
+                <li>कोई लॉगिन की आवश्यकता नहीं: उपयोगकर्ता खाता की आवश्यकता के बिना सूचना तक पहुँचने का स्वातंत्र्य अनुभव करें।</li>
+                <li>तत्काल उत्तर: हमारी समर्पित टीम आपके प्रश्नों का समय पर और सटीक उत्तर सुनिश्चित करती है।</li>
+                <li>वैश्विक पहुँच: WorldQna दुनिया भर के उपयोगकर्ताओं को ध्यान में रखकर डिज़ाइन किया गया है, जो कई भाषाओं में सामग्री प्रदान करता है।</li>
+                <li>प्रतिसादी डिज़ाइन: हमारे प्रतिक्रियात्मक वेब डिज़ाइन के साथ किसी भी उपकरण पर सीमित अनुभव का आनंद लें।</li>
+            </ul>
+    
+            <h2>WorldQna कैसे काम करता है</h2>
+            <p>WorldQna.com उपयोगकर्ताओं को यह सुविधा प्रदान करता है:</p>
+            <ol>
+                <li>प्रश्न पूछें: बिना लॉगिन की आवश्यकता के विभिन्न विषयों पर अपने प्रश्न पूछें।</li>
+                <li>विशेषज्ञ उत्तर प्राप्त करें: हमारी विशेषज्ञ टीम कुछ घंटों के भीतर आपके प्रश्नों का विश्वसनीय और समृद्ध उत्तर प्रदान करती है।</li>
+                <li>समुदाय के साथ जुड़ें: चर्चाओं में शामिल हों, अपने ज्ञान को साझा करें, और समान सोच वाले व्यक्तियों से जुड़ें।</li>
+            </ol>
+    
+            <h2>वैश्विक चर्चा में शामिल हों</h2>
+            <p>WorldQna का उपयोग करना आसान और सीधा है:</p>
+            <ol>
+                <li>हमारी वेबसाइट पर जाएं: अपने पसंदीदा वेब ब्राउज़र का उपयोग करके worldqna.com पर जाएं।</li>
+                <li>प्रश्न पूछें: "प्रश्न पूछें" खंड में जाएं और अपने प्रश्न टाइप करें। लॉगिन की आवश्यकता नहीं है!</li>
+                <li>विशेषज्ञ उत्तर प्राप्त करें: हमारी टीम कुछ घंटों के भीतर विश्वसनीय और समृद्ध उत्तर प्रदान करेगी।</li>
+                <li>समुदाय के साथ जुड़ें: चर्चाओं में शामिल हों, प्रतिक्रिया प्रदान करें, और अन्य उपयोगकर्ताओं से जुड़ें जो आपके रुचि रखते हैं।</li>
+            </ol>
+    
+            <h2>WorldQna का उपयोग करने के लाभ</h2>
+            <p>WorldQna को चुनकर आप विभिन्न लाभों को अनलॉक करते हैं:</p>
+            <ul>
+                <li>विविध ज्ञान तक पहुँच: विश्वभर के विशेषज्ञों से विभिन्न विषयों पर उत्तर खोजें।</li>
+                <li>समय-एफिशिएंट समाधान: कुछ घंटों में अपने प्रश्नों का त्वरित उत्तर प्राप्त करें।</li>
+                <li>समुदाय संलग्नता: समान सोच वाले व्यक्तियों से जुड़ें, अपने दृढ़ता को साझा करें, और दूसरों से सीखें।</li>
+                <li>कोई लॉगिन परेशानी नहीं: उपयोगकर्ता खाता की आवश्यकता के बिना प्रश्न पूछने की सुविधा का आनंद लें।</li>
+            </ul>
+    
+            <p>आज ही WorldQna.com में शामिल हों और खोज की एक यात्रा पर निकलें। अपने सीमाओं को बढ़ाएं, समान रुचियों वाले व्यक्तियों से जुड़ें, और इस वैश्विक ज्ञान हब में अपने जिज्ञासा को बढ़ाएं। साथ में, चलो WorldQna.com को बुद्धिमान अन्वेषण का केंद्र बनाते हैं!</p>
+            
+        </section>
+    </div>
+</div>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

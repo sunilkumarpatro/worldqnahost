@@ -1,0 +1,127 @@
+{% extends "french/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}En savoir plus sur WorldQna.com : connecter le monde grâce à des conversations multilingues{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}Découvrez l'histoire derrière WorldQna.com, une plateforme dédiée à favoriser les connexions mondiales à travers des discussions multilingues. Découvrez notre mission, notre vision et l'équipe qui anime cette communauté linguistique inclusive.{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, About Us, Multilingual Platform, Global Connections, Mission and Vision, Language-Inclusive Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}about-us/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}about-us/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}about-us/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}about-us/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}about-us/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}about-us/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}about-us/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}about-us/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}about-us/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}about-us/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}about-us/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}about-us/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}about-us/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}En savoir plus sur WorldQna.com : connecter le monde grâce à des conversations multilingues{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}Découvrez l'histoire derrière WorldQna.com, une plateforme dédiée à favoriser les connexions mondiales à travers des discussions multilingues. Découvrez notre mission, notre vision et l'équipe qui anime cette communauté linguistique inclusive.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}about-us/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}En savoir plus sur WorldQna.com : connecter le monde grâce à des conversations multilingues{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}Découvrez l'histoire derrière WorldQna.com, une plateforme dédiée à favoriser les connexions mondiales à travers des discussions multilingues. Découvrez notre mission, notre vision et l'équipe qui anime cette communauté linguistique inclusive.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "about" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_about" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_about" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_about" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_about" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_about" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_about" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_about" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_about" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_about" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            
+            
+            
+            <div class="welcome-section">
+                <h1>About Us Page</h1>
+                
+            </div>
+            
+            <p>Bienvenue sur WorldQna.com, qui est engagé à rendre les discussions en ligne révolutionnaires et à briser les barrières linguistiques.</p>
+
+<h2>Notre Mission</h2>
+<p>À WorldQna, nous avons pour mission de créer une communauté mondiale où l'information circule librement, dépassant les barrières linguistiques et d'accès. Nous visons à autonomiser les individus en leur fournissant des ressources et des connaissances pour prendre des décisions éclairées, apprendre de nouvelles choses et se connecter avec des experts mondiaux.</p>
+
+<h2>Pourquoi Choisir WorldQna.com ?</h2>
+<p>WorldQna.com se démarque pour ses fonctionnalités uniques :</p>
+<ul>
+    <li>Aucune connexion requise : Profitez de l'accès à l'information sans avoir besoin de créer un compte utilisateur.</li>
+    <li>Réponses immédiates : Notre équipe dévouée s'assure de fournir des réponses précises et rapides à vos questions.</li>
+    <li>Portée mondiale : Conçu en tenant compte des utilisateurs du monde entier, WorldQna propose du contenu dans plusieurs langues.</li>
+    <li>Design réactif : Profitez d'une expérience sans faille sur n'importe quel appareil avec notre design web réactif.</li>
+</ul>
+
+<h2>Comment Fonctionne WorldQna.com</h2>
+<p>WorldQna.com offre aux utilisateurs les fonctionnalités suivantes :</p>
+<ol>
+    <li>Poser des questions : Posez des questions sur divers sujets sans avoir besoin de vous connecter.</li>
+    <li>Obtenir des réponses d'experts : Notre équipe d'experts fournira des réponses fiables et enrichissantes dans quelques heures.</li>
+    <li>Rejoindre la communauté : Participez aux discussions, partagez vos connaissances et connectez-vous avec des personnes partageant les mêmes intérêts.</li>
+</ol>
+
+<h2>Rejoignez la Discussion Mondiale</h2>
+<p>Utiliser WorldQna est simple et direct :</p>
+<ol>
+    <li>Visitez notre site web : Accédez à worldqna.com via votre navigateur web préféré.</li>
+    <li>Poser des questions : Accédez à la section "Poser une question" et tapez votre question. Aucune connexion requise !</li>
+    <li>Obtenir des réponses d'experts : Notre équipe vous fournira des réponses fiables et enrichissantes dans quelques heures.</li>
+    <li>Rejoindre la communauté : Participez aux discussions, donnez votre avis et connectez-vous avec d'autres utilisateurs partageant vos intérêts.</li>
+</ol>
+
+<h2>Avantages de l'Utilisation de WorldQna</h2>
+<p>En choisissant WorldQna, vous débloquez divers avantages :</p>
+<ul>
+    <li>Accès à une connaissance diversifiée : Obtenez des réponses sur divers sujets auprès d'experts du monde entier.</li>
+    <li>Résolution efficace des problèmes : Obtenez des réponses rapides à vos questions en quelques heures seulement.</li>
+    <li>Inclusion communautaire : Connectez-vous avec des personnes partageant les mêmes idées, partagez vos connaissances et apprenez des autres.</li>
+    <li>Pas de tracas de connexion : Profitez de la commodité de poser des questions sans avoir besoin de créer un compte utilisateur.</li>
+</ul>
+
+<p>Rejoignez dès aujourd'hui WorldQna.com et embarquez pour un voyage d'exploration. Élargissez vos horizons, connectez-vous avec des esprits similaires et enrichissez votre curiosité dans ce hub mondial de connaissances. Ensemble, faisons de WorldQna.com le centre d'intelligence avisé !</p>
+
+        </section>
+    </div>
+</div>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

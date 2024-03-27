@@ -1,0 +1,205 @@
+{% extends "english/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com: Breaking Language Barriers in Online Discussions{% endblock en_title %}
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}WorldQna.com: Ask and reply in multiple languages, no login required. Join the global
+conversation effortlessly.{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}worldqna.com, multilingual discussions, online conversations, global community, language
+barriers, knowledge sharing{% endblock en_keywords %}
+{% comment %} add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {%
+endcomment %}
+{% block x_default_url %}{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}home/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}home/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}home/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}home/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}home/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}home/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}home/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}home/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}home/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com: Breaking Language Barriers in Online Discussions{% endblock %}
+
+
+{% block en_seo_facebook_description %}WorldQna.com: Ask and reply in multiple languages, no login required. Join the
+global conversation effortlessly.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com: Breaking Language Barriers in Online Discussions{% endblock %}
+
+
+
+{% block en_seo_twitter_description %}WorldQna.com: Ask and reply in multiple languages, no login required. Join the
+global conversation effortlessly.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "home" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_home" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_home" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_home" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_home" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_home" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_home" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_home" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_home" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_home" %}{% endblock body_japanese_url %}
+
+{% block base_head %}{% load static %}{% endblock base_head %}
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="banner">
+        <div class="mini-banner">
+
+            <h1>WorldQna.com: Breaking Language Barriers in Online Discussions</h1>
+            <p>WorldQna: Access global knowledge hassle-free! No login needed, instant expert answers in multiple languages. Engage with the community, explore diverse topics in text or video formats. Join us now at worldqna.com</p>
+            <button><a href="/ask-question/" style="color: white;">Ask Question</a></button>
+        </div>
+    </div>
+    <div class="trending-question">
+        <div class="r-box">
+            <div class="top-box">Trending Question</div>
+            <div class="bottom-box"><img src="{% static "img/worldqna.png" %}" alt="img" srcset=""></div>
+        </div>
+        <div class="l-box">
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>In today's rapidly evolving world, art continues to push boundaries and challenge perceptions. From traditional mediums like painting and sculpture to digital and performance art, creators are breaking free from convention to express complex ideas and emotions. This diversity fuels a vibrant cultural landscape</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+        </div>
+    </div>
+    <div class="lang-box">
+        <div class="lang-top-box">
+            <p class="f1">Choose Languages</p>
+            <p>Explore diverse languages on our platform. Choose from English, Hindi, Spanish, Chinese, Arabic, French,Portuguese, Russian, German, or Japanese.</p>
+        </div>
+        <div class="lang-bottom-box">
+            <div class="lang-bo">English</div>
+            <div class="lang-bo">Hindi</div>
+            <div class="lang-bo">Spanish</div>
+            <div class="lang-bo">Chinese</div>
+            <div class="lang-bo">Arabic</div>
+            <div class="lang-bo">French</div>
+            <div class="lang-bo">Portuguese</div>
+            <div class="lang-bo">Russian</div>
+            <div class="lang-bo">German</div>
+            <div class="lang-bo">Japanese</div>
+        </div>
+    </div>
+    <div class="main">
+
+
+        <section class="home-section">
+
+            
+
+            <h2>Our Vision</h2>
+            <p>At WorldQna, we envision a global community where information flows freely, breaking down language and
+                accessibility barriers. Our mission is to empower individuals by providing them with the tools and
+                resources they need to make informed decisions, learn new things, and connect with experts across
+                various fields.</p>
+
+            <h2>Key Features:</h2>
+            <ul>
+                <li><strong>No Login Required:</strong> Experience the freedom to access information without the need
+                    for a user account.</li>
+                <li><strong>Instant Answers:</strong> Our dedicated team ensures timely and accurate responses to your
+                    queries.</li>
+                <li><strong>Global Reach:</strong> WorldQna is designed to cater to users from around the world,
+                    offering content in multiple languages.</li>
+                <li><strong>Responsive Design:</strong> Enjoy a seamless experience on any device with our responsive
+                    web design.</li>
+            </ul>
+
+            <h2>Explore WorldQna</h2>
+            <p>1. <strong>Ask Questions:</strong> Pose your queries on a wide range of topics without the need for a
+                login.</p>
+            <p>2. <strong>Get Expert Answers:</strong> Our team of experts provides reliable and well-researched
+                responses within a few hours.</p>
+            <p>3. <strong>Engage with the Community:</strong> Join discussions, share your knowledge, and connect with
+                like-minded individuals.</p>
+
+
+
+            <h2>How to Use WorldQna</h2>
+            <p>Using WorldQna is easy and straightforward. Follow these steps to make the most out of your experience:
+            </p>
+            <ol class="list">
+                <li><strong>Visit Our Website:</strong> Go to worldqna.com using your preferred web browser.</li>
+                <li><strong>Ask a Question:</strong> Navigate to the "Ask a Question" section and type your inquiry. No
+                    need to login!</li>
+                <li><strong>Receive Expert Answers:</strong> Our team will promptly respond with well-researched answers
+                    within a few hours.</li>
+                <li><strong>Engage with the Community:</strong> Join discussions, provide feedback, and connect with
+                    other users who share your interests.</li>
+            </ol>
+
+            <h2>Benefits of Using WorldQna</h2>
+            <p>By choosing WorldQna, you unlock a range of benefits:</p>
+            <ul>
+                <li><strong>Access to Diverse Knowledge:</strong> Explore answers on a wide range of topics from experts
+                    around the world.</li>
+                <li><strong>Time-Efficient Solutions:</strong> Get rapid responses to your questions within a few hours.
+                </li>
+                <li><strong>Community Engagement:</strong> Connect with like-minded individuals, share your insights,
+                    and learn from others.</li>
+                <li><strong>No Login Hassle:</strong> Enjoy the convenience of asking questions without the need for a
+                    user account.</li>
+                    <li><strong>Multiple Formats:</strong> Access Q&A in both text and video formats for enhanced learning and comprehension.</li>
+            </ul>
+
+        </section>
+    </div>
+    <p style="text-align: center;padding: 0px 10px 30px 10px;"><b>Join WorldQna.com today and unlock a world of knowledge, connection, and convenience!</b></p>
+</div>
+{% endblock body %}
+{% comment %} <!-- end body --> {% endcomment %}

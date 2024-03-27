@@ -1,0 +1,135 @@
+{% extends "german/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}Suchergebnisse auf WorldQna.com: Finden Sie Antworten in mehreren Sprachen{% endblock en_title %}
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}Auf WorldQna.com finden Sie eine Vielzahl von Antworten in mehreren Sprachen. Entdecken Sie ein breites Themenspektrum und treten Sie unserer globalen Community bei.{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, About Us, Multilingual Platform, Global Connections, Mission and Vision, Language-Inclusive Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}search/?query={{ query}}{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}search/?query={{ query}}{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}search/?query={{ query}}{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}search/?query={{ query}}{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}search/?query={{ query}}{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}search/?query={{ query}}{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}search/?query={{ query}}{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}search/?query={{ query}}{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}search/?query={{ query}}{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}search/?query={{ query}}{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}search/?query={{ query}}{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}search/?query={{ query}}{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}search/?query={{ query}}{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}Suchergebnisse auf WorldQna.com: Finden Sie Antworten in mehreren Sprachen{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}Auf WorldQna.com finden Sie eine Vielzahl von Antworten in mehreren Sprachen. Entdecken Sie ein breites Themenspektrum und treten Sie unserer globalen Community bei.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}search/?query={{ query}}{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}Suchergebnisse auf WorldQna.com: Finden Sie Antworten in mehreren Sprachen{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}Auf WorldQna.com finden Sie eine Vielzahl von Antworten in mehreren Sprachen. Entdecken Sie ein breites Themenspektrum und treten Sie unserer globalen Community bei.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "search" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_search" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_search" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_search" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_search" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_search" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_search" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_search" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_search" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_search" %}{% endblock body_japanese_url %}
+<!-- start body -->
+{% block body %}
+<div class="container">
+    <div class="main" style="padding-top: 0px;">
+        <section style="box-shadow: none;">
+
+
+            <div id="search-container">
+
+    {% if query|length < 3 %}
+        <p style="text-align:center;">Bitte geben Sie eine Suchanfrage mit mindestens 3 Zeichen ein.</p>
+    {% else %}
+        
+
+        {% if allQnas|length < 1 %}
+            <p>No search results found.</p>
+            <p>Your search query: <b>{{ query|truncatechars:200 }}</b> did not match any documents.</p>
+            <p>Suggestions:</p>
+            <ul>
+                <li>Make sure that all words are spelled correctly.</li>
+                <li>Try more general keywords.</li>
+                <li>Try fewer keywords.</li>
+                <li>Try different keywords.</li>
+            </ul>
+        {% else %}
+            {% for q in allQnas %}
+                {% if q.showhide == "show" %}
+{% load static %}
+                <div class="result">
+                    <div class="url-container">
+                        <img src="{% static 'img/favicon-32x32.png' %}" alt="" srcset="">
+                        <span class="url">https://www.worldqna.com/de/{{ q.slug }}</span>
+                    </div>
+                    <div class="result-content">
+                        <h2><a href="/de/{{ q.slug }}">{{ q.german_title_question }}</a></h2>
+                        <p>{{ q.german_descripton|truncatechars:140 }}</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {% elif q.showhide == "hide" %}
+                    <p>No search results found.</p>
+                    <p>Your search query: <b>{{ query|truncatechars:200 }}</b> did not match any documents.</p>
+                    <p>Suggestions:</p>
+                    <ul>
+                        <li>Make sure that all words are spelled correctly.</li>
+                        <li>Try more general keywords.</li>
+                        <li>Try fewer keywords.</li>
+                        <li>Try different keywords.</li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endif %}
+</div>
+</section>
+</div>
+</div>
+{% endblock %}
+
+
+
+
+
+<!-- end body -->

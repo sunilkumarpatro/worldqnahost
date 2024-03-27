@@ -1,0 +1,142 @@
+{% extends "spanish/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}Póngase en contacto con WorldQna.com: comuníquese con nosotros para consultas y colaboraciones{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}¿Tienes dudas o estás interesado en colaborar? Póngase en contacto con WorldQna.com. Damos la bienvenida a consultas, comentarios y oportunidades de asociación. Conectemos y mejoremos nuestra conversación global.{% endblock en_description %}
+
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Contact Us, Inquiries, Collaborations, Global Conversation, Feedback{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}contact-us/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}contact-us/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}contact-us/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}contact-us/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}contact-us/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}contact-us/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}contact-us/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}contact-us/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}contact-us/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}contact-us/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}contact-us/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}contact-us/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}contact-us/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}Póngase en contacto con WorldQna.com: comuníquese con nosotros para consultas y colaboraciones{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}¿Tienes dudas o estás interesado en colaborar? Póngase en contacto con WorldQna.com. Damos la bienvenida a consultas, comentarios y oportunidades de asociación. Conectemos y mejoremos nuestra conversación global.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}contact-us/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}Póngase en contacto con WorldQna.com: comuníquese con nosotros para consultas y colaboraciones{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}¿Tienes dudas o estás interesado en colaborar? Póngase en contacto con WorldQna.com. Damos la bienvenida a consultas, comentarios y oportunidades de asociación. Conectemos y mejoremos nuestra conversación global.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "contact" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_contact" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_contact" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_contact" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_contact" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_contact" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_contact" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_contact" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_contact" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_contact" %}{% endblock body_japanese_url %}
+
+{% block head %}{% load static %}<link rel="stylesheet" href="{% static 'css/contact.css' %}">{% endblock head %}
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="contact-box">
+       
+        <div class="container-contact">
+            <div class="alert success" style="display: none;">
+                <span class="icon">&#10003;</span>
+                <strong>Success:</strong> Your message has been sent in <span id="successCountdown">10</span> seconds...
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <div class="alert error" id="nameLengthError" style="display: none;">
+                <span class="icon">&#10008;</span>
+                <strong>Error:</strong> Please enter at least 5 characters for Name.
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <div class="alert error" id="emailLengthError" style="display: none;">
+                <span class="icon">&#10008;</span>
+                <strong>Error:</strong> Please enter at least 10 characters for Email.
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <div class="alert error" id="messageLengthError" style="display: none;">
+                <span class="icon">&#10008;</span>
+                <strong>Error:</strong> Please enter at least 15 characters for Message.
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <div class="alert error" style="display: none;">
+                <span class="icon">&#10008;</span>
+                <strong>Error:</strong> Please fill in all required fields correctly.
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            
+            <form action="{% url 'es_contact' %}" method="post" id="myForm">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required style="background-color: white; border: 1px solid #34515e;"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        
+            <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="https://youtube.com/@worldqna?si=e9XQbKMSJ5ZvN5k-" target="_blank" title="YouTube"><i class="fab fa-youtube"
+                            style="color: #FF0000;"></i></a>
+
+                    <a href="https://www.facebook.com/worldqna?mibextid=ZbWKwL" target="_blank" title="Facebook"><i class="fab fa-facebook-f"
+                            style="color: #3b5998;"></i></a>
+
+                    <a href="https://www.instagram.com/worldqna.com_official?igsh=bndmdGNjMXBkajJj" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"
+                            style="background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; background-clip: text; color: transparent;"></i>
+                    </a>
+
+
+                    <a href="https://twitter.com/WorldQna?fbclid=IwAR0wkt5RXOUjK0zP_iRAsUqEpsOuLOecweo2SVWUQ9b_1CcdFg1nEo1Kq-E" target="_blank" title="Twitter"><i class="fab fa-twitter"
+                            style="color: #1da1f2;"></i></a>
+
+                </div>
+        </div>
+        
+    </div>
+    </div>
+</div>
+<script src="{% static "js/contact.js" %}"></script>
+{% endblock body %}
+{% comment %} <!-- end body --> {% endcomment %}

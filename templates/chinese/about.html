@@ -1,0 +1,122 @@
+{% extends "chinese/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}了解有关 WorldQna.com 的更多信息：通过多语言对话连接世界{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}了解 WorldQna.com 背后的故事，该平台致力于通过多语言讨论鼓励全球联系。 探索我们的使命、愿景和推动这个语言包容性社区的团队。{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, About Us, Multilingual Platform, Global Connections, Mission and Vision, Language-Inclusive Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}about-us/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}about-us/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}about-us/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}about-us/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}about-us/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}about-us/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}about-us/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}about-us/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}about-us/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}about-us/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}about-us/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}about-us/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}about-us/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}了解有关 WorldQna.com 的更多信息：通过多语言对话连接世界{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}了解 WorldQna.com 背后的故事，该平台致力于通过多语言讨论鼓励全球联系。 探索我们的使命、愿景和推动这个语言包容性社区的团队。{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}about-us/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}了解有关 WorldQna.com 的更多信息：通过多语言对话连接世界{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}了解 WorldQna.com 背后的故事，该平台致力于通过多语言讨论鼓励全球联系。 探索我们的使命、愿景和推动这个语言包容性社区的团队。{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "about" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_about" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_about" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_about" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_about" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_about" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_about" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_about" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_about" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_about" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            <div class="welcome-section">
+                <h1>About Us Page</h1>
+            </div>
+        
+            <p>欢迎来到 WorldQna.com，在这里我们致力于使在线讨论变得革命性，并且有能力突破语言障碍。</p>
+        
+            <h2>我们的使命</h2>
+            <p>在 WorldQna，我们的使命是建立一个全球社区，其中信息自由流动，突破语言和获取方面的障碍。我们通过为个人提供资源，使他们能够根据信息做出明智决策，学习新知识，并与全球各领域的专家联系，来实现这一目标。</p>
+        
+            <h2>为什么选择 WorldQna.com？</h2>
+            <p>WorldQna.com 以其独特的特点脱颖而出：</p>
+            <ul>
+                <li>无需登录：享受自由访问信息的体验，无需用户账户。</li>
+                <li>即时回答：我们专注的团队确保及时而准确地回答您的问题。</li>
+                <li>全球覆盖：WorldQna 考虑到全球用户，提供多种语言的内容。</li>
+                <li>响应式设计：我们的响应式网页设计让您在任何设备上都能获得一致的体验。</li>
+            </ul>
+        
+            <h2>WorldQna 如何工作</h2>
+            <p>WorldQna.com 为用户提供以下功能：</p>
+            <ol>
+                <li>提出问题：在不需要登录的情况下提出关于各种主题的问题。</li>
+                <li>获取专家答案：我们的专家团队在几个小时内为您提供可靠且丰富的答案。</li>
+                <li>与社区互动：参与讨论，分享您的知识，并与志同道合的人建立联系。</li>
+            </ol>
+        
+            <h2>加入全球讨论</h2>
+            <p>使用 WorldQna 很简单直接：</p>
+            <ol>
+                <li>访问我们的网站：使用您喜爱的网络浏览器访问 worldqna.com。</li>
+                <li>提出问题：转到“提问”部分并键入您的问题。无需登录！</li>
+                <li>获取专家答案：我们的团队将在几个小时内为您提供可靠且丰富的答案。</li>
+                <li>与社区互动：参与讨论，提供反馈，并与其他用户建立联系。</li>
+            </ol>
+        
+            <h2>使用 WorldQna 的好处</h2>
+            <p>通过选择 WorldQna，您将获得各种好处：</p>
+            <ul>
+                <li>多样化的知识获取：从全球各领域的专家那里获取各种主题的答案。</li>
+                <li>高效解决方案：在几个小时内获得您的问题的快速答案。</li>
+                <li>社区互动：与志同道合的人联系，分享您的见解，并从他人那里学习。</li>
+                <li>无需登录麻烦：享受提问的便利，无需用户账户。</li>
+            </ul>
+        
+            <p>立即加入 WorldQna.com，并开始探索之旅。扩展您的边界，与志同道合的人联系，并提升您在这个全球知识中心的存在。一起，让我们将 WorldQna.com 打造成智慧探索的中心！</p>
+        </section>
+    </div>
+</div>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

@@ -1,0 +1,115 @@
+{% extends "arabic/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}سياسة الخصوصية: حماية تجربتك على WorldQna.com{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}تعرف على كيفية قيام WorldQna.com بإعطاء الأولوية لخصوصيتك وحماية أمانك. توضح سياسة الخصوصية الخاصة بنا الإجراءات التي نتخذها لضمان أمان معلوماتك وضمان تجربة آمنة وممتعة عبر الإنترنت.{% endblock en_description %}
+
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Privacy Policy, Data Protection, Online Security, User Privacy, Information Safeguarding{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}privacy-policy/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}privacy-policy/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}privacy-policy/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}privacy-policy/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}privacy-policy/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}privacy-policy/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}privacy-policy/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}privacy-policy/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}privacy-policy/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}privacy-policy/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}privacy-policy/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}privacy-policy/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}privacy-policy/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}سياسة الخصوصية: حماية تجربتك على WorldQna.com{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}تعرف على كيفية قيام WorldQna.com بإعطاء الأولوية لخصوصيتك وحماية أمانك. توضح سياسة الخصوصية الخاصة بنا الإجراءات التي نتخذها لضمان أمان معلوماتك وضمان تجربة آمنة وممتعة عبر الإنترنت.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}privacy-policy/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}سياسة الخصوصية: حماية تجربتك على WorldQna.com{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}تعرف على كيفية قيام WorldQna.com بإعطاء الأولوية لخصوصيتك وحماية أمانك. توضح سياسة الخصوصية الخاصة بنا الإجراءات التي نتخذها لضمان أمان معلوماتك وضمان تجربة آمنة وممتعة عبر الإنترنت.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "privacy" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_privacy" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_privacy" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_privacy" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_privacy" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_privacy" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_privacy" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_privacy" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_privacy" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_privacy" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            <div class="welcome-section">
+                <h1>سياسة الخصوصية لـ WorldQna.com</h1>
+            </div>
+            <p>
+                كيفية معالجة بيانات المستخدم الخاصة بك في WorldQna.com وكيفية تقديم هذه السياسة الخصوصية توجيهات لك حول منصتنا للأسئلة والأجوبة.
+            </p>
+        
+            <h2>المعلومات التي نجمعها</h2>
+            <p>
+                يقوم WorldQna.com بجمع ومعالجة الأسئلة والأجوبة والتعليقات التي تم نشرها فقط بواسطة المستخدمين. نحن لا نجمع أو نعالج أي معلومات شخصية مثل الأسماء أو عناوين البريد الإلكتروني أو أي تفاصيل شخصية أخرى.
+            </p>
+        
+            <h2>كيفية استخدام معلوماتك</h2>
+            <p>
+                يتم استخدام المعلومات المجمعة فقط لتقديم منصة للأسئلة والأجوبة. لا نستخدم هذه المعلومات لأغراض تسويقية أو أي أغراض أخرى.
+            </p>
+        
+            <h2>الكوكيز والتتبع</h2>
+            <p>
+                لا يستخدم WorldQna.com أي نوع من تقنيات الكوكيز أو التتبع لجمع معلومات شخصية.
+            </p>
+        
+            <h2>الأمان</h2>
+            <p>
+                نحن نتخذ التدابير المناسبة لضمان أمان المعلومات المجمعة. ومع ذلك، نظرًا لأن أي طريقة للاتصال عبر الإنترنت غير مؤمنة بنسبة 100٪، فإننا لا نستطيع ضمان أمان كامل.
+            </p>
+        
+            <h2>روابط الأطراف الثالثة</h2>
+            <p>
+                قد تتضمن WorldQna.com روابط إلى مواقع ويب من الأطراف الثالثة. نحن لا نتحكم في محتوى هذه المواقع وممارساتها الخصوصية، ونوصيك بمراجعة سياسات الخصوصية الخاصة بهم.
+            </p>
+        
+            <h2>تحديث سياسة الخصوصية</h2>
+            <p>
+                نحن قد نقوم بتحديث هذه السياسة الخصوصية بناءً على تغييرات في ممارساتنا. يرجى مراجعة هذه الصفحة بانتظام للحصول على أحدث المعلومات.
+            </p>
+        </section>
+        
+    </div>
+</div>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

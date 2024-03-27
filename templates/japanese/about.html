@@ -1,0 +1,121 @@
+{% extends "japanese/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com の詳細をご覧ください: 多言語会話を通じて世界を繋ぐ{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}多言語ディスカッションを通じてグローバルなつながりを促進することに特化したプラットフォーム、WorldQna.com の背後にあるストーリーをご覧ください。 私たちの使命、ビジョン、そしてこの言語を含むコミュニティを推進するチームをご覧ください。{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, About Us, Multilingual Platform, Global Connections, Mission and Vision, Language-Inclusive Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}about-us/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}about-us/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}about-us/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}about-us/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}about-us/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}about-us/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}about-us/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}about-us/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}about-us/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}about-us/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}about-us/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}about-us/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}about-us/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com の詳細をご覧ください: 多言語会話を通じて世界を繋ぐ{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}多言語ディスカッションを通じてグローバルなつながりを促進することに特化したプラットフォーム、WorldQna.com の背後にあるストーリーをご覧ください。 私たちの使命、ビジョン、そしてこの言語を含むコミュニティを推進するチームをご覧ください。{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}about-us/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com の詳細をご覧ください: 多言語会話を通じて世界を繋ぐ{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}多言語ディスカッションを通じてグローバルなつながりを促進することに特化したプラットフォーム、WorldQna.com の背後にあるストーリーをご覧ください。 私たちの使命、ビジョン、そしてこの言語を含むコミュニティを推進するチームをご覧ください。{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "about" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_about" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_about" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_about" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_about" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_about" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_about" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_about" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_about" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_about" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            
+            
+            
+            <div class="welcome-section">
+                <h1>私たちについてのページ</h1>
+                
+            </div>
+            
+            <p>WorldQna.comへようこそ。オンラインディスカッションを革新し、言語の壁を乗り越えるためのプラットフォームです。</p>
+<h2>私たちのミッション</h2>
+<p>WorldQnaでは、情報の自由な流れ、言語やアクセスの障壁を乗り越えることをミッションとしています。個々の意思決定を支援し、新しいことを学び、世界の専門家とつながることを可能にするため、ツールとリソースを提供しています。</p>
+<h2>WorldQna.comの選択理由</h2>
+<p>WorldQna.comは、次の特徴で際立っています：</p>
+<ul>
+    <li>ログイン不要：アカウントなしで情報にアクセスできます。</li>
+    <li>即時回答：専門チームが迅速かつ正確に回答します。</li>
+    <li>グローバルアクセス：多言語コンテンツを提供し、世界中のユーザーを考慮して設計されています。</li>
+    <li>レスポンシブデザイン：反応性のあるウェブデザインで、どんなデバイスでも快適な体験ができます。</li>
+</ul>
+<h2>WorldQnaの仕組み</h2>
+<p>WorldQna.comは、ユーザーに次の機能を提供しています：</p>
+<ol>
+    <li>質問する：ログイン不要でさまざまなトピックに質問できます。</li>
+    <li>専門家の回答を受け取る：専門チームが数時間以内に信頼性のある充実した回答を提供します。</li>
+    <li>コミュニティに参加する：ディスカッションに参加し、知識を共有し、同じ考えを持つ人々とつながります。</li>
+</ol>
+<h2>グローバルディスカッションに参加する</h2>
+<p>WorldQnaの使用は簡単で直感的です：</p>
+<ol>
+    <li>ウェブサイトにアクセス：お気に入りのウェブブラウザを使用して、worldqna.comにアクセスします。</li>
+    <li>質問する：「質問する」セクションに移動し、質問を入力します。ログインは必要ありません！</li>
+    <li>専門家の回答を受け取る：専門チームが数時間以内に信頼性のある充実した回答を提供します。</li>
+    <li>コミュニティに参加する：ディスカッションに参加し、フィードバックを提供し、興味のある他のユーザーとつながります。</li>
+</ol>
+<h2>WorldQnaの利点</h2>
+<p>WorldQnaを選択することで、さまざまな利点を活用できます：</p>
+<ul>
+    <li>多様な知識へのアクセス：世界中の専門家からさまざまなトピックに関する回答を見つけます。</li>
+    <li>時間の効率的な解決策：数時間で迅速に質問に回答します。</li>
+    <li>コミュニティの参加：同じ興味を持つ人々とつながり、知識を共有し、他者から学びます。</li>
+    <li>ログインの煩わしさなし：アカウントがなくても質問できます。</li>
+</ul>
+<p>今すぐWorldQna.comに参加して、探求の旅に出ましょう。自分の限界を超え、共通の関心を持つ人々とつながり、このグローバルな知識ハブを賢い探求の中心にしましょう！</p>
+            
+        </section>
+    </div>
+</div>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

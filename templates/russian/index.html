@@ -1,0 +1,197 @@
+{% extends "russian/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com: Преодоление языковых барьеров в онлайн-обсуждениях{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}WorldQna.com: спрашивайте и отвечайте на нескольких языках, вход в систему не требуется. Легко присоединяйтесь к глобальным дискуссиям.{% endblock en_description %}
+
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}worldqna.com, multilingual discussions, online conversations, global community, language barriers, knowledge sharing{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}home/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}home/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}home/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}home/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}home/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}home/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}home/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}home/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}home/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}home/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com: Преодоление языковых барьеров в онлайн-обсуждениях{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}WorldQna.com: спрашивайте и отвечайте на нескольких языках, вход в систему не требуется. Легко присоединяйтесь к глобальным дискуссиям.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com: Преодоление языковых барьеров в онлайн-обсуждениях{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}WorldQna.com: спрашивайте и отвечайте на нескольких языках, вход в систему не требуется. Легко присоединяйтесь к глобальным дискуссиям.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "home" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_home" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_home" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_home" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_home" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_home" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_home" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_home" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_home" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_home" %}{% endblock body_japanese_url %}
+
+{% block base_head %}{% load static %}{% endblock base_head %}
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="banner">
+        <div class="mini-banner">
+
+            <h1>WorldQna.com: Преодоление языковых барьеров в онлайн-обсуждениях</h1>
+            <p>WorldQna: доступ к глобальным знаниям без проблем! Вход в систему не требуется, эксперты мгновенно отвечают на нескольких языках. Взаимодействуйте с сообществом, исследуйте разнообразные темы в текстовых или видеоформатах. Присоединяйтесь к нам сейчас на worldqna.com</p>
+            <button><a href="/ru/ask-question/" style="color: white;">Ask Question</a></button>
+        </div>
+    </div>
+    <div class="trending-question">
+        <div class="r-box">
+            <div class="top-box">Trending Question</div>
+            <div class="bottom-box"><img src="{% static "img/worldqna.png" %}" alt="img" srcset=""></div>
+        </div>
+        <div class="l-box">
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>In today's rapidly evolving world, art continues to push boundaries and challenge perceptions. From traditional mediums like painting and sculpture to digital and performance art, creators are breaking free from convention to express complex ideas and emotions. This diversity fuels a vibrant cultural landscape</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+            <div class="trending-box"><a class="trending-link" href="">Your Link Here</a>
+                <p>There is just enough space here for several lines of text. Make sure you get your message across
+                    clearly yet concisely.</p>
+            </div>
+        </div>
+    </div>
+    <div class="lang-box">
+        <div class="lang-top-box">
+            <p class="f1">Выберите языки</p>
+            <p>Изучите разнообразные языки на нашей платформе. Выберите английский, хинди, испанский, китайский, арабский, французский, португальский, русский, немецкий или японский.</p>
+        </div>
+        <div class="lang-bottom-box">
+            <div class="lang-bo">English</div>
+            <div class="lang-bo">Hindi</div>
+            <div class="lang-bo">Spanish</div>
+            <div class="lang-bo">Chinese</div>
+            <div class="lang-bo">Arabic</div>
+            <div class="lang-bo">French</div>
+            <div class="lang-bo">Portuguese</div>
+            <div class="lang-bo">Russian</div>
+            <div class="lang-bo">German</div>
+            <div class="lang-bo">Japanese</div>
+        </div>
+    </div>
+    <div class="main">
+
+
+        <section class="home-section">
+
+            
+
+            <h2>Наш взгляд</h2>
+            <p>В WorldQna мы представляем себе глобальное сообщество, в котором информация распространяется свободно, разрушая язык и
+                 барьеры доступности. Наша миссия — расширять возможности людей, предоставляя им инструменты и
+                 ресурсы, необходимые им для принятия обоснованных решений, изучения нового и общения с экспертами со всего мира.
+                 Различные поля.</p>
+
+            <h2>Ключевая особенность:</h2>
+            <ul>
+                <li><strong>Вход в систему не требуется.</strong> Ощутите свободу доступа к информации без необходимости
+                    для учетной записи пользователя.</li>
+                    <li><strong>Мгновенные ответы.</strong> Наша преданная своему делу команда гарантирует своевременные и точные ответы на ваши
+                        запросы.</li>
+<li><strong>Глобальный охват.</strong> WorldQna предназначена для пользователей со всего мира.
+                     предлагая контент на нескольких языках.</li>
+                     <li><strong>Адаптивный дизайн.</strong> Наслаждайтесь удобной работой на любом устройстве благодаря нашему адаптивному дизайну.
+                        веб-дизайн.</li>
+            </ul>
+
+            <h2>Исследуйте WorldQna</h2>
+             <р>1. <strong>Задавайте вопросы</strong>. Задавайте вопросы по широкому кругу тем без необходимости
+                 войти.</p>
+             <р>2. <strong>Получите ответы экспертов.</strong> Наша команда экспертов предоставляет надежные и хорошо изученные
+                 ответы в течение нескольких часов.</p>
+             <р>3. <strong>Взаимодействуйте с сообществом.</strong> Присоединяйтесь к обсуждениям, делитесь своими знаниями и общайтесь с
+                 единомышленники.</p>
+
+
+            <h2>Как использовать WorldQna</h2>
+            <p>Использовать WorldQna легко и просто. Выполните следующие действия, чтобы получить максимальную отдачу от вашего опыта:
+            </p>
+            <ol class="list">
+                <li><strong>Посетите наш веб-сайт:</strong> Перейдите на worldqna.com, используя предпочитаемый вами веб-браузер.</li>
+                <li><strong>Задать вопрос</strong>. Перейдите в раздел «Задать вопрос» и введите свой запрос. Нет
+                    необходимо войти!</li>
+                <li><strong>Получайте ответы экспертов.</strong> Наша команда оперативно ответит тщательно продуманными ответами.
+                    в течение нескольких часов.</li>
+                <li><strong>Взаимодействуйте с сообществом.</strong> Присоединяйтесь к обсуждениям, оставляйте отзывы и общайтесь с
+                    другие пользователи, разделяющие ваши интересы.</li>
+            </ol>
+
+            <h2>Преимущества использования WorldQna</h2>
+            <p>Выбирая WorldQna, вы открываете ряд преимуществ:</p>
+            <ul>
+                <li><strong>Доступ к разнообразным знаниям.</strong> Узнайте ответы экспертов на самые разные темы.
+                    по всему миру.</li>
+                <li><strong>Решения, позволяющие экономить время.</strong> Получите быстрые ответы на свои вопросы в течение нескольких часов.
+                </li>
+                <li><strong>Взаимодействие с сообществом.</strong> Общайтесь с единомышленниками, делитесь своими идеями,
+                    и учиться у других.</li>
+                <li><strong>Нет проблем с входом в систему:</strong> наслаждайтесь удобством, позволяющим задавать вопросы без необходимости
+                    учетная запись пользователя.</li>
+                    <li><strong>Несколько форматов.</strong> Получите доступ к вопросам и ответам как в текстовом, так и в видеоформате для более эффективного обучения и понимания.</li>
+            </ul>
+
+        </section>
+    </div>
+    <p style="text-align: center;padding: 0px 10px 30px 10px;"><b>Присоединяйтесь к WorldQna.com сегодня и откройте для себя мир знаний, связи и удобства!</b></p>
+</div>
+{% endblock body %}
+{% comment %} <!-- end body --> {% endcomment %}

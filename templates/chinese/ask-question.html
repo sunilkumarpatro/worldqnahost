@@ -1,0 +1,177 @@
+{% extends "chinese/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com：用您最喜欢的语言提问和分享，无需登录{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}探索在 WorldQna.com 上提出和分享问题的简单性。 支持多种语言且无需登录，加入多元化的全球社区，轻松共享知识。{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Ask Question, Share Knowledge, Multilingual Interaction, No Login Required, Global Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}ask-question/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}ask-question/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}ask-question/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}ask-question/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}ask-question/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}ask-question/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}ask-question/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}ask-question/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}ask-question/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}ask-question/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}ask-question/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}ask-question/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}ask-question/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com：用您最喜欢的语言提问和分享，无需登录{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}探索在 WorldQna.com 上提出和分享问题的简单性。 支持多种语言且无需登录，加入多元化的全球社区，轻松共享知识。{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}ask-question/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com：用您最喜欢的语言提问和分享，无需登录{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}探索在 WorldQna.com 上提出和分享问题的简单性。 支持多种语言且无需登录，加入多元化的全球社区，轻松共享知识。{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "ask" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_ask" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_ask" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_ask" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_ask" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_ask" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_ask" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_ask" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_ask" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_ask" %}{% endblock body_japanese_url %}
+
+
+
+
+{% block head %}
+{% load static %}<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+{% endblock head %}
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+        
+        <section>
+            
+            
+            <div class="alert error" id="nameLengthError" style="display: none;">
+                <span class="icon">&#10008;</span>
+                <strong>Error:</strong> Please enter at least 10 characters
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <div class="alert error" id="messageLengthError" style="display: none;">
+                <span class="icon">&#10008;</span>
+                <strong>Error:</strong> Text content cannot exceed 500 characters
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <div class="alert error" id="imageLengthError" style="display: none;">
+                <span class="icon">&#10008;</span>
+                <strong>Error:</strong> under 6mb size image allowed
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+            <h1 style="text-align: center;">问问题</h1>
+            <form class="editor-container" method="post" enctype="multipart/form-data" action="{% url 'ask' %}" onsubmit="return submitForm();" name="yourFormName">
+                {% csrf_token %}
+                <input type="file" name="question_image" id="imageUploader" accept="image/*" onchange="handleImageUpload(this)">
+                <input type="hidden" name="english_title_question" placeholder="Enter your question title" id="englishTitleQuestion" value="">
+                <div id="editor" contenteditable="true" data-placeholder="添加您的问题" oninput="updateHiddenInput()" ondrop="handleDragAndDrop(event)" ondragover="event.preventDefault()"></div>
+                <div id="errorMessage" class="error-message"></div>
+                <div class="bo">
+                    <button id="uploadButton" type="button" onclick="document.getElementById('imageUploader').click()">Upload Image</button>
+                    <button id="submitButton" type="submit" onclick="submitForm()">Submit Question</button>
+
+                </div>
+            </form>
+            <div class="alert success" id="successAlert" style="display: none;">
+                <span class="icon">&#10003;</span>
+                <strong>Success:</strong> Your message has been sent in <span id="successCountdown">10</span> seconds...
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+                <div class="ask">
+                    <h2>在WorldQna.com上提问的方式</h2>
+                    <p>要在WorldQna.com上提问，请遵循以下简单步骤：</p>
+                    <ol>
+                        <li><strong>访问WorldQna.com：</strong> 打开您喜欢的网络浏览器，转到 <a href="https://worldqna.com" target="_blank">worldqna.com</a>。</li>
+                        
+                        <li><strong>查找“提问”选项：</strong> 在导航栏中查找“提问”选项。这是为了用户的方便和可访问性而设计的，并支持多语言。</li>
+                        
+                        <li><strong>准备您的问题：</strong> 在提供的文本框中写下您的问题。为了获得最佳回答，请保持清晰简洁。</li>
+                        
+                        <li><strong>选择您的语言：</strong> WorldQna.com支持多种语言。为了全球参与，请选择您感觉最舒适的语言来提问。</li>
+                        
+                        <li><strong>无需登录：</strong> 我们相信突破障碍，并且这不需要用户帐户。尽情提问，无需登录。</li>
+                        
+                        <li><strong>提交您的问题：</strong> 当您准备好您的问题后，请点击提交按钮。您的问题将发送给我们的社区和专家们。</li>
+                        
+                        <li><strong>注意问题框：</strong> 您只能提交包含文本和一张图片的问题。仅提交图片或拖放图片的提交将不被处理。请确保附加的图片大小不超过6MB。文本至少应为10个字符，不超过500个字符。</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <h2>提交问题后会发生什么</h2>
+                    <p>在WorldQna.com上提交问题后会发生以下情况：</p>
+                    
+                    <ul>
+                        <li>您的问题会进入我们的审核队列。</li>
+                        <li>我们的团队会确保您的问题到达正确的专家或社区成员以获得正确和及时的回答。</li>
+                        <li>您将在几小时内收到答案，这样您就可以迅速获取信息。</li>
+                        <li>几小时后，访问worldqna.com，查找您的问题，答案将以多种语言提供。</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2>与答案互动</h2>
+                    <p>当答案开始出现时，您可以继续参与讨论：</p>
+                    
+                    <ul>
+                        <li>进行澄清。</li>
+                        <li>分享额外细节以修改反馈。</li>
+                        <li>感谢有价值的经验。</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2>成为全球讨论的一部分</h2>
+                    <p>您的问题为WorldQna.com社区增添了丰富的知识。参与全球社区：</p>
+                    
+                    <ul>
+                        <li>与分享您兴趣的人联系。</li>
+                        <li>享受多元化社区，超越语言障碍。</li>
+                    </ul>
+                </div>
+                
+                
+                
+                
+                
+            </section>
+            
+            
+        </div>
+</div>
+
+<script src="{% static "js/ask.js" %}"></script>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

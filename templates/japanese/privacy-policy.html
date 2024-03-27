@@ -1,0 +1,118 @@
+{% extends "japanese/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}プライバシー ポリシー: WorldQna.com でのエクスペリエンスの保護{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}WorldQna.com がどのようにプライバシーを優先し、セキュリティを保護するかをご覧ください。 当社のプライバシー ポリシーには、お客様の情報のセキュリティを確保し、安全で楽しいオンライン体験を保証するために当社が講じる措置が詳しく記載されています。{% endblock en_description %}
+
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Privacy Policy, Data Protection, Online Security, User Privacy, Information Safeguarding{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}privacy-policy/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}privacy-policy/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}privacy-policy/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}privacy-policy/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}privacy-policy/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}privacy-policy/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}privacy-policy/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}privacy-policy/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}privacy-policy/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}privacy-policy/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}privacy-policy/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}privacy-policy/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}privacy-policy/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}プライバシー ポリシー: WorldQna.com でのエクスペリエンスの保護{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}WorldQna.com がどのようにプライバシーを優先し、セキュリティを保護するかをご覧ください。 当社のプライバシー ポリシーには、お客様の情報のセキュリティを確保し、安全で楽しいオンライン体験を保証するために当社が講じる措置が詳しく記載されています。{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}privacy-policy/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}プライバシー ポリシー: WorldQna.com でのエクスペリエンスの保護{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}WorldQna.com がどのようにプライバシーを優先し、セキュリティを保護するかをご覧ください。 当社のプライバシー ポリシーには、お客様の情報のセキュリティを確保し、安全で楽しいオンライン体験を保証するために当社が講じる措置が詳しく記載されています。{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "privacy" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_privacy" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_privacy" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_privacy" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_privacy" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_privacy" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_privacy" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_privacy" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_privacy" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_privacy" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            
+            <div class="welcome-section">
+                <h1>WorldQna.com プライバシーポリシー</h1>
+                
+            </div>
+            <p>
+                WorldQna.com でのあなたのユーザーデータの取り扱いについて、このプライバシーポリシーは当社の質問および回答プラットフォームに関連する情報を提供します。
+            </p>
+    
+            <h2>収集する情報</h2>
+            <p>
+                WorldQna.com は、投稿された質問、回答、およびコメントのみを収集および管理します。 私たちは名前、電子メールアドレス、またはその他の個人情報など、個人を特定できる情報を収集しません。
+            </p>
+    
+            <h2>情報の使用方法</h2>
+            <p>
+                収集された情報は、質問および回答プラットフォームを機能させるためにのみ使用されます。 当社は、この情報をマーケティングまたは他の目的に使用しません。
+            </p>
+    
+            <h2>Cookie とトラッキング</h2>
+            <p>
+                WorldQna.com は、個人情報を収集するための Cookie やトラッキングテクノロジーを使用しません。
+            </p>
+    
+            <h2>セキュリティ</h2>
+            <p>
+                私たちは収集された情報のセキュリティを確保するために適切な措置を講じています。 ただし、インターネットを介した通信は常に100％安全ではないため、完全なセキュリティを保証することはできません。
+            </p>
+    
+            <h2>第三者リンク</h2>
+            <p>
+                WorldQna.com には第三者ウェブサイトへのリンクが含まれる場合があります。 私たちはこれらのサイトのコンテンツやプラクティスについて制御を持たず、彼らのプライバシーポリシーを確認することをお勧めします。
+            </p>
+    
+            <h2>プライバシーポリシーの更新</h2>
+            <p>
+                私たちは、実践の変更に応じてこのプライバシーポリシーを更新することがあります。 最新情報については、定期的にこのページを確認してください。
+            </p>
+            
+        </section>
+
+    </div>
+</div>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

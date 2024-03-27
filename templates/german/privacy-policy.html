@@ -1,0 +1,118 @@
+{% extends "german/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}Datenschutzrichtlinie: Schutz Ihrer Erfahrung auf WorldQna.com{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}Erfahren Sie, wie WorldQna.com Ihre Privatsphäre priorisiert und Ihre Sicherheit schützt. Unsere Datenschutzrichtlinie beschreibt die Maßnahmen, die wir ergreifen, um die Sicherheit Ihrer Daten zu gewährleisten und ein sicheres und angenehmes Online-Erlebnis zu gewährleisten.{% endblock en_description %}
+
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Privacy Policy, Data Protection, Online Security, User Privacy, Information Safeguarding{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}privacy-policy/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}privacy-policy/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}privacy-policy/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}privacy-policy/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}privacy-policy/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}privacy-policy/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}privacy-policy/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}privacy-policy/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}privacy-policy/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}privacy-policy/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}privacy-policy/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}privacy-policy/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}privacy-policy/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}Datenschutzrichtlinie: Schutz Ihrer Erfahrung auf WorldQna.com{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}Erfahren Sie, wie WorldQna.com Ihre Privatsphäre priorisiert und Ihre Sicherheit schützt. Unsere Datenschutzrichtlinie beschreibt die Maßnahmen, die wir ergreifen, um die Sicherheit Ihrer Daten zu gewährleisten und ein sicheres und angenehmes Online-Erlebnis zu gewährleisten.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}privacy-policy/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}Datenschutzrichtlinie: Schutz Ihrer Erfahrung auf WorldQna.com{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}Erfahren Sie, wie WorldQna.com Ihre Privatsphäre priorisiert und Ihre Sicherheit schützt. Unsere Datenschutzrichtlinie beschreibt die Maßnahmen, die wir ergreifen, um die Sicherheit Ihrer Daten zu gewährleisten und ein sicheres und angenehmes Online-Erlebnis zu gewährleisten.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "privacy" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_privacy" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_privacy" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_privacy" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_privacy" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_privacy" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_privacy" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_privacy" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_privacy" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_privacy" %}{% endblock body_japanese_url %}
+
+
+
+
+
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+
+        <section>
+            
+            <div class="welcome-section">
+                <h1>Datenschutzrichtlinie von WorldQna.com</h1>
+                
+            </div>
+            <p>
+                Wie wir Ihre Benutzerdaten auf WorldQna.com verarbeiten, wird in unserer Datenschutzrichtlinie erläutert, die relevante Informationen zu unserer Fragen- und Antwortenplattform bereitstellt.
+            </p>
+            
+            <h2>Welche Informationen sammeln wir</h2>
+            <p>
+                WorldQna.com sammelt und verwaltet ausschließlich Fragen, Antworten und Kommentare, die von Benutzern gepostet wurden. Wir sammeln keine persönlich identifizierbaren Informationen wie Namen, E-Mail-Adressen oder andere persönliche Details.
+            </p>
+            
+            <h2>Wie verwenden wir Ihre Informationen</h2>
+            <p>
+                Die gesammelten Informationen werden ausschließlich zum Zwecke der Bereitstellung der Fragen- und Antwortenplattform verwendet. Wir verwenden diese Informationen nicht für Marketing oder andere Zwecke.
+            </p>
+            
+            <h2>Cookies und Tracking</h2>
+            <p>
+                WorldQna.com verwendet keine Cookies oder Tracking-Technologien zum Sammeln von persönlichen Informationen.
+            </p>
+            
+            <h2>Sicherheit</h2>
+            <p>
+                Wir treffen angemessene Maßnahmen, um die Sicherheit der gesammelten Informationen zu gewährleisten. Da jedoch keine Kommunikation im Internet zu 100% sicher ist, können wir keine vollständige Sicherheit garantieren.
+            </p>
+            
+            <h2>Links zu Drittanbieter-Websites</h2>
+            <p>
+                WorldQna.com kann Links zu Websites von Drittanbietern enthalten. Wir haben keine Kontrolle über die Inhalte und Praktiken dieser Websites und empfehlen Ihnen, deren Datenschutzrichtlinien zu überprüfen.
+            </p>
+            
+            <h2>Aktualisierung der Datenschutzrichtlinie</h2>
+            <p>
+                Wir können diese Datenschutzrichtlinie aktualisieren, um Änderungen in unseren Praktiken zu reflektieren. Bitte überprüfen Sie diese Seite regelmäßig auf die neuesten Informationen.
+            </p>
+            
+            
+        </section>
+    </div>
+</div>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}

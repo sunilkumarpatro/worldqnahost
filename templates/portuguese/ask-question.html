@@ -1,0 +1,169 @@
+{% extends "portuguese/base.html" %}
+{% comment %} English language {% endcomment %}
+{% comment %} add title {% endcomment %}
+{% block en_title %}WorldQna.com: pergunte e compartilhe em seu idioma favorito, sem necessidade de login{% endblock en_title %}
+
+{% comment %} add description for seo {% endcomment %}
+{% block en_description %}Explore a simplicidade de fazer e compartilhar perguntas no WorldQna.com. Com suporte para vários idiomas e sem requisitos de login, junte-se à diversificada comunidade global com fácil compartilhamento de conhecimento.{% endblock en_description %}
+{% comment %} add keywords for seo {% endcomment %}
+{% block en_keywords %}WorldQna.com, Ask Question, Share Knowledge, Multilingual Interaction, No Login Required, Global Community{% endblock en_keywords %}
+{% comment %}  add canonical url for seo this page proper url like worldqna.com/what-is-html{% endcomment %}
+{% block en_cononical_url %}ask-question/{% endblock en_cononical_url %}
+{% comment %} <!-- start Hreflang Tags for seo target user-->
+<!-- Default --> {% endcomment %}
+{% comment %} add main page english page url default for user not choose language this user show default english page {% endcomment %}
+{% block x_default_url %}ask-question/{% endblock x_default_url %}
+{% comment %} <!-- English --> {% endcomment %}
+{% block en_url %}ask-question/{% endblock en_url %}
+{% comment %} <!-- Spanish --> {% endcomment %}
+{% block es_url %}ask-question/{% endblock es_url %}
+{% comment %} <!-- Hindi --> {% endcomment %}
+{% block hi_url %}ask-question/{% endblock hi_url %}
+{% comment %} <!-- Chinese (Mandarin) --> {% endcomment %}
+{% block zh_url %}ask-question/{% endblock zh_url %}
+{% comment %} <!-- Arabic --> {% endcomment %}
+{% block ar_url %}ask-question/{% endblock ar_url %}
+{% comment %} <!-- Portuguese --> {% endcomment %}
+{% block pt_url %}ask-question/{% endblock pt_url %}
+{% comment %} <!-- Russian --> {% endcomment %}
+{% block ru_url %}ask-question/{% endblock ru_url %}
+{% comment %} <!-- French --> {% endcomment %}
+{% block fr_url %}ask-question/{% endblock fr_url %}
+{% comment %} <!-- Japanese --> {% endcomment %}
+{% block ja_url %}ask-question/{% endblock ja_url %}
+{% comment %} <!-- German --> {% endcomment %}
+{% block de_url %}ask-question/{% endblock de_url %}
+{% comment %} <!-- end Hreflang Tags for seo target user--> {% endcomment %}
+{% comment %} <!-- Open Graph / Facebook --> {% endcomment %}
+{% block en_seo_facebook_url %}ask-question/{% endblock en_seo_facebook_url %}
+{% block en_seo_facebook_title %}WorldQna.com: pergunte e compartilhe em seu idioma favorito, sem necessidade de login{% endblock en_seo_facebook_title %}
+{% block en_seo_facebook_description %}Explore a simplicidade de fazer e compartilhar perguntas no WorldQna.com. Com suporte para vários idiomas e sem requisitos de login, junte-se à diversificada comunidade global com fácil compartilhamento de conhecimento.{% endblock en_seo_facebook_description %}
+{% block seo_facebook_image %}/static/img/worldqna-facebook-image.png{% endblock seo_facebook_image %}
+
+{% comment %} <!-- Twitter --> {% endcomment %}
+{% block en_seo_twitter_url %}ask-question/{% endblock en_seo_twitter_url %}
+{% block en_seo_twitter_title %}WorldQna.com: pergunte e compartilhe em seu idioma favorito, sem necessidade de login{% endblock en_seo_twitter_title %}
+{% block en_seo_twitter_description %}Explore a simplicidade de fazer e compartilhar perguntas no WorldQna.com. Com suporte para vários idiomas e sem requisitos de login, junte-se à diversificada comunidade global com fácil compartilhamento de conhecimento.{% endblock en_seo_twitter_description %}
+{% block seo_twitter_image %}/static/img/worldqna-twitter-image.png{% endblock seo_twitter_image %}
+
+{% comment %} <!-- start body --> {% endcomment %}
+{% block body_english_url %}{% url "ask" %}{% endblock body_english_url %}
+{% block body_hindi_url %}{% url "hi_ask" %}{% endblock body_hindi_url %}
+{% block body_spanish_url %}{% url "es_ask" %}{% endblock body_spanish_url %}
+{% block body_chinese_url %}{% url "zh_ask" %}{% endblock body_chinese_url %}
+{% block body_arabic_url %}{% url "ar_ask" %}{% endblock body_arabic_url %}
+{% block body_french_url %}{% url "fr_ask" %}{% endblock body_french_url %}
+{% block body_portuguese_url %}{% url "pt_ask" %}{% endblock body_portuguese_url %}
+{% block body_russian_url %}{% url "ru_ask" %}{% endblock body_russian_url %}
+{% block body_german_url %}{% url "de_ask" %}{% endblock body_german_url %}
+{% block body_japanese_url %}{% url "ja_ask" %}{% endblock body_japanese_url %}
+
+
+
+
+{% block head %}
+{% load static %}<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+{% endblock head %}
+
+
+{% block body %}
+<div class="container">
+    <div class="main">
+        
+        <section>
+            
+            
+            <div>
+                <div class="alert error" id="nameLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Please enter at least 10 characters
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="alert error" id="messageLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> Text content cannot exceed 500 characters
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="alert error" id="imageLengthError" style="display: none;">
+                    <span class="icon">&#10008;</span>
+                    <strong>Error:</strong> under 6mb size image allowed
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <h1 style="text-align: center;">pergunte</h1>
+                <form class="editor-container" method="post" enctype="multipart/form-data" action="{% url 'ask' %}" onsubmit="return submitForm();" name="yourFormName">
+                    {% csrf_token %}
+                    <input type="file" name="question_image" id="imageUploader" accept="image/*" onchange="handleImageUpload(this)">
+                    <input type="hidden" name="english_title_question" placeholder="Enter your question title" id="englishTitleQuestion" value="">
+                    <div id="editor" contenteditable="true" data-placeholder="Adicione sua pergunta" oninput="updateHiddenInput()" ondrop="handleDragAndDrop(event)" ondragover="event.preventDefault()"></div>
+                    <div id="errorMessage" class="error-message"></div>
+                    <div class="bo">
+                        <button id="uploadButton" type="button" onclick="document.getElementById('imageUploader').click()">Upload Image</button>
+                        <button id="submitButton" type="submit" onclick="submitForm()">Submit Question</button>
+
+                    </div>
+                </form>
+                
+                <div class="alert success" id="successAlert" style="display: none;">
+                    <span class="icon">&#10003;</span>
+                    <strong>Success:</strong> Your message has been sent in <span id="successCountdown">10</span> seconds...
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                </div>
+                <div class="ask">
+                    <h2>Como fazer uma pergunta no WorldQna.com</h2>
+                    <p>Para fazer uma pergunta no WorldQna.com, siga estes passos simples:</p>
+                    <ol>
+                        <li><strong>Acesse o WorldQna.com:</strong> Abra seu navegador favorito e acesse o <a href="https://worldqna.com" target="_blank">worldqna.com</a>.</li>
+                        <li><strong>Encontre a opção "Faça uma pergunta":</strong> Procure pela opção "Faça uma pergunta" na barra de navegação. Ela foi projetada para ser acessível e conveniente para os usuários, oferecendo suporte multilíngue.</li>
+                        <li><strong>Prepare sua pergunta:</strong> Escreva sua pergunta na caixa de texto fornecida. Mantenha-a clara e concisa para obter as melhores respostas.</li>
+                        <li><strong>Escolha seu idioma:</strong> O WorldQna.com oferece suporte a vários idiomas. Escolha o idioma no qual se sente mais confortável para fazer sua pergunta e participar da comunidade global.</li>
+                        <li><strong>Não é necessário fazer login:</strong> Acreditamos em superar barreiras, e isso inclui não exigir contas de usuário para fazer perguntas. Aproveite a liberdade de fazer perguntas sem a necessidade de login.</li>
+                        <li><strong>Envie sua pergunta:</strong> Quando sua pergunta estiver pronta, clique no botão de envio. Sua pergunta será enviada para nossa comunidade e especialistas relevantes para revisão.</li>
+                        <li><strong>Preste atenção à caixa de pergunta:</strong> Você pode enviar sua pergunta apenas com texto e uma imagem. Apresentações enviadas apenas com imagens ou arrastar e soltar imagens não serão processadas. Certifique-se de que a imagem anexada tenha menos de 6 MB. O texto deve ter pelo menos 10 caracteres e não mais que 500 caracteres.</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <h2>O que acontece depois de enviar sua pergunta</h2>
+                    <p>Após enviar sua pergunta para o WorldQna.com, o seguinte ocorre:</p>
+                    <ul>
+                        <li>Sua pergunta entra em nossa fila de revisão.</li>
+                        <li>Nossa equipe garante que sua pergunta seja encaminhada para os especialistas ou membros da comunidade apropriados para obter respostas precisas e oportunas.</li>
+                        <li>Você recebe uma resposta dentro de algumas horas, permitindo que você obtenha informações rapidamente.</li>
+                        <li>Depois de algumas horas, acesse o worldqna.com, pesquise sua pergunta e as respostas estarão disponíveis em vários idiomas.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2>Engaje-se com as respostas</h2>
+                    <p>Quando as respostas começarem a surgir, você pode se manter ativo na discussão:</p>
+                    <ul>
+                        <li>Faça perguntas para esclarecimento.</li>
+                        <li>Compartilhe detalhes adicionais para modificar a resposta.</li>
+                        <li>Expresse gratidão por experiências valiosas.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h2>Seja parte da discussão global</h2>
+                    <p>Sua pergunta contribui para o rico tecido de conhecimento no WorldQna.com. Junte-se à comunidade global:</p>
+                    <ul>
+                        <li>Conecte-se com pessoas que compartilham seus interesses.</li>
+                        <li>Aproveite uma comunidade diversificada que ultrapassa as barreiras linguísticas.</li>
+                    </ul>
+                </div>
+                
+                
+                
+                
+                
+            </section>
+            
+            
+        </div>
+</div>
+
+<script src="{% static "js/ask.js" %}"></script>
+{% endblock body %}
+
+{% comment %} <!-- end body --> {% endcomment %}
